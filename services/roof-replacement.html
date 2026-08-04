@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX</title>
-  <meta name="description" content="BBB A+ accredited residential roofing &amp; remodeling in Pharr, TX. 24/7 answer, same-day emergency tarping, free roof inspections across the Rio Grande Valley." />
-  <meta name="keywords" content="about Hidalgo Roofing, roofing company Pharr TX, roofing contractor Pharr, BBB accredited roofer Rio Grande Valley, residential roofer Hidalgo County, remodeling contractor Pharr TX" />
+  <!-- TITLE COLLISION RULE: leads on "Roof Replacement" — distinct from the homepage
+       ("Roofing & Remodeling in Pharr, TX") and from every sibling service page. -->
+  <title>Roof Replacement in Pharr, TX | Hidalgo Roofing</title>
+  <meta name="description" content="New roof installation in Pharr, TX and the Rio Grande Valley. Full tear-off, shingle and metal roofing, free inspections. BBB A+ accredited. Call today." />
+  <meta name="keywords" content="roof replacement Pharr TX, new roof Pharr TX, roof installation McAllen TX, tear off re-roof Rio Grande Valley, shingle roof replacement Pharr, metal roof Hidalgo County" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta property="og:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections. Call (956) 460-3489." />
-  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <meta property="og:title" content="Roof Replacement in Pharr, TX | Hidalgo Roofing" />
+  <meta property="og:description" content="Full roof replacement across Pharr and the Rio Grande Valley. Tear-off to the deck, shingle and metal options, free inspections. Call (956) 460-3489." />
+  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch (LAUNCH BLOCKER) -->
   <meta property="og:image:width" content="1200" />
@@ -22,8 +24,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta name="twitter:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections." />
+  <meta name="twitter:title" content="Roof Replacement in Pharr, TX | Hidalgo Roofing" />
+  <meta name="twitter:description" content="Full roof replacement across Pharr and the Rio Grande Valley. Tear-off to the deck, shingle and metal options, free inspections." />
   <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -442,39 +444,219 @@
   </style>
 
   <!-- ============================================================
-       ABOUT-PAGE SCHEMA — 3 blocks:
-         1) AboutPage, pointing at the homepage business node.
-         2) LocalBusiness REF — same @id as the homepage business node, so
-            this is a reference, NOT a second declaration. Address, hours,
-            offer catalog and aggregateRating stay on the homepage only.
-         3) BreadcrumbList.
-       No staff/employee, foundingDate or award property is emitted — those
-       are [NEEDS INPUT] in CLAUDE.md and must not be invented.
+       SERVICE-PAGE SCHEMA — 3 blocks: Service + FAQPage + BreadcrumbList
+       provider references the homepage business node by @id (never a
+       re-declaration of the LocalBusiness).
+       NO price / priceRange / Offer price anywhere — [NEEDS INPUT] and the
+       Hard Rule routes all pricing intent to the free-inspection CTA.
   ============================================================ -->
 
-  <!-- 1/3 — AboutPage -->
+  <!-- 1/3 — Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://www.hidalgoroofingremodelingtx.com/about.html#aboutpage",
-    "url": "https://www.hidalgoroofingremodelingtx.com/about.html",
-    "name": "About Hidalgo Roofing & Remodeling",
-    "description": "A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, Texas, serving the Rio Grande Valley.",
-    "about": { "@id": "https://www.hidalgoroofingremodelingtx.com/#business" }
+    "@type": "Service",
+    "@id": "https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html#service",
+    "serviceType": "Roof Replacement",
+    "name": "Roof Replacement",
+    "description": "Residential roof replacement in Pharr, Texas and the Rio Grande Valley. Full tear-off to the deck, decking repair, new underlayment and flashing, architectural asphalt shingle, metal, and impact-resistant roof installation. BBB Accredited Business with an A+ rating.",
+    "url": "https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html",
+    "provider": {
+      "@type": "RoofingContractor",
+      "@id": "https://www.hidalgoroofingremodelingtx.com/#business",
+      "name": "Hidalgo Roofing & Remodeling LLC",
+      "telephone": "+19564603489",
+      "url": "https://www.hidalgoroofingremodelingtx.com/"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Pharr",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "McAllen",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Edinburg",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Mission",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Weslaco",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "San Juan",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Alamo",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Palmview",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Donna",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Mercedes",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Roof Replacement Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Full Roof Tear-Off and Replacement"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Asphalt Shingle Roof Installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Metal Roof Installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Impact-Resistant Roof Installation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Roof Decking Repair"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Free Roof Inspection"
+          }
+        }
+      ]
+    }
   }
   </script>
 
-  <!-- 2/3 — LocalBusiness reference -->
+  <!-- 2/3 — FAQPage (6 Q&As; mirrors the visible accordion word-for-word) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "RoofingContractor",
-    "@id": "https://www.hidalgoroofingremodelingtx.com/#business",
-    "name": "Hidalgo Roofing & Remodeling LLC",
-    "url": "https://www.hidalgoroofingremodelingtx.com/",
-    "telephone": "+19564603489",
-    "email": "hidalgoroofing9@gmail.com"
+    "@type": "FAQPage",
+    "@id": "https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to replace a roof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most houses in the Valley are a one to two day job once we start — tear-off in the morning, dry-in the same day, and finish out after that. Bigger or steeper roofs take longer. We will give you a timeframe with the quote so you can plan around it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to move out while you work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You can stay in the house. It is loud, and there will be a dumpster in the driveway for a day or two, but the work happens entirely outside. We will tell you where to move vehicles before we start."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you put a new roof over the old one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We do not. Layering over the old shingles hides the decking, and if the wood underneath has gone soft you will not find out until the new roof starts failing. Tearing off costs a bit more and is the reason the new roof lasts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a roof replacement cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It comes down to the size and pitch of the roof, the material you choose, and what the decking looks like once the old shingles are off. That is why there is no number on this page. The inspection is free and the quote is in writing before work begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if you find rotten decking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We stop and show you. Replacing bad decking is extra wood and extra labor, so it is not included in a blind quote — but you will see the boards yourself and approve the change before we carry on. Nothing gets added to the bill without you seeing why."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if I need a replacement or just a repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If the damage is in one area and the rest of the roof still has granules and lies flat, a roof repair is usually the answer. If shingles are curling and bald across the whole surface, replacement is the cheaper road over time. The free inspection settles it, and we will show you the photos either way."
+        }
+      }
+    ]
   }
   </script>
 
@@ -493,8 +675,14 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "About",
-        "item": "https://www.hidalgoroofingremodelingtx.com/about.html"
+        "name": "Services",
+        "item": "https://www.hidalgoroofingremodelingtx.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Roof Replacement",
+        "item": "https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html"
       }
     ]
   }
@@ -532,7 +720,7 @@
             <a href="/services/roofing.html">Roofing</a>
             <a href="/services/storm-restoration.html">Storm Restoration</a>
             <a href="/services/roof-repair.html">Roof Repair</a>
-            <a href="/services/roof-replacement.html">Roof Replacement</a>
+            <a href="/services/roof-replacement.html" aria-current="page">Roof Replacement</a>
             <a href="/services/home-remodeling.html">Home Remodeling</a>
             <a href="/services/room-additions.html">Room Additions</a>
           </div>
@@ -553,7 +741,7 @@
           </div>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150" aria-current="page">About</a>
+        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
         <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
         <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
@@ -584,7 +772,7 @@
           <a href="/services/roofing.html">Roofing</a>
           <a href="/services/storm-restoration.html">Storm Restoration</a>
           <a href="/services/roof-repair.html">Roof Repair</a>
-          <a href="/services/roof-replacement.html">Roof Replacement</a>
+          <a href="/services/roof-replacement.html" aria-current="page">Roof Replacement</a>
           <a href="/services/home-remodeling.html">Home Remodeling</a>
           <a href="/services/room-additions.html">Room Additions</a>
         </div>
@@ -602,7 +790,7 @@
           <a href="/areas/san-juan.html">San Juan</a>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium" aria-current="page">About</a>
+        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
         <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
@@ -611,10 +799,11 @@
       </div>
     </div>
   </nav>
+
   <!-- ============================================================
-       HERO (full-height, hero-background photo slot)
+       HERO
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="About Hidalgo Roofing and Remodeling">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Roof replacement in Pharr, Texas">
 
     <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
     <!-- Hero video: shared site-wide clip. brand_assets/hero-background.mp4 (H.264, no
@@ -635,38 +824,49 @@
       <source src="/brand_assets/hero-background.mp4" type="video/mp4" />
     </video>
 
+    <!-- Dark overlay — heavier on the LEFT so the text block keeps its dark bed
+         no matter how bright the real hero-background.jpg turns out to be. -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
       linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.80) 0%, rgba(var(--color-dark-rgb), 0.42) 25%, rgba(var(--color-dark-rgb), 0.38) 65%, rgba(var(--color-dark-rgb), 0.84) 100%),
       linear-gradient(90deg, rgba(var(--color-dark-rgb), 0.86) 0%, rgba(var(--color-dark-rgb), 0.62) 38%, transparent 72%),
       radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.88) 0%, transparent 68%);
     "></div>
 
+    <!-- Edge vignette -->
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
     <div class="hero-outer relative z-10 max-w-5xl mx-auto px-5 w-full">
       <div class="hero-text-block max-w-2xl fade-up">
 
+        <!-- Breadcrumb (mirrors the BreadcrumbList JSON-LD above) -->
         <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span class="sep" aria-hidden="true">/</span>
-          <span class="current">About</span>
+          <a href="/#services">Services</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span class="current">Roof Replacement</span>
         </nav>
 
+        <!-- BBB A+ emphasis — client-requested trust signal.
+             [NEEDS INPUT] the real BBB accreditation mark is not in brand_assets/ —
+             text badge only until it lands. Do NOT fabricate a BBB logo. -->
         <div class="mb-6">
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 52px; width: auto; max-height: 60px; display: block;" />
         </div>
 
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Roofing &amp; Remodeling &middot; Pharr, TX</p>
+        <!-- Eyebrow -->
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Roof Replacement &middot; Pharr, TX &amp; the Rio Grande Valley</p>
 
         <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          About<br />
-          <span style="color: var(--color-accent-bright);">Hidalgo Roofing.</span>
+          Roof Replacement<br />in Pharr, TX —<br />
+          <span style="color: var(--color-accent-bright);">Down to the Deck.</span>
         </h1>
 
         <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          A residential roofing and remodeling contractor working out of Pharr and across the Rio Grande Valley. Someone answers the phone around the clock, and <strong style="color: var(--color-bg);">every roof starts with a free inspection</strong>.
+          When a roof is worn through rather than damaged in one spot, patching it just moves the leak. We strip it to the deck, fix what is underneath, and build it back properly. <strong style="color: var(--color-bg);">Free inspection and a written quote</strong> before anything comes off.
         </p>
 
+        <!-- CTAs — primary intake routes to the GHL form at /#contact. -->
         <div class="flex flex-wrap gap-4 mb-10">
           <a href="tel:+19564603489" class="btn-primary text-base px-7 py-4">
             Call Now — (956) 460-3489
@@ -677,6 +877,7 @@
           </a>
         </div>
 
+        <!-- Stats row -->
         <div class="hero-stats flex flex-wrap gap-8">
           <div>
             <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
@@ -684,19 +885,20 @@
           </div>
           <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
           <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">24/7</div>
-            <div class="text-muted text-sm mt-0.5">We Answer</div>
+            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Full</div>
+            <div class="text-muted text-sm mt-0.5">Tear-Offs</div>
           </div>
           <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
           <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">A+</div>
-            <div class="text-muted text-sm mt-0.5">BBB Accredited</div>
+            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">20+ Years</div>
+            <div class="text-muted text-sm mt-0.5">In the Roofing Trade</div>
           </div>
         </div>
 
       </div>
     </div>
 
+    <!-- Gold accent bridge -->
     <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-primary) 18%, var(--color-primary) 82%, transparent 100%); opacity: 0.92;"></div>
   </section>
 
@@ -705,160 +907,70 @@
   ============================================================ -->
   <main id="main-content">
 
-    <!-- SPLIT 1 (light): our story — text left, one photo right.
-         Owner is named ONCE here, first name only, in the dedicated
-         owner reference — never in a heading, meta, OG or CTA
-         (CLAUDE.md: never publish a last name for Richard). -->
-    <section id="our-story" class="section-dark atmo wash-navy-tr py-24" aria-label="The Hidalgo Roofing story">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Our Story</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Roofing and Remodeling, Run Out of Pharr
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Hidalgo Roofing &amp; Remodeling is a locally owned residential contractor based at 415 North Sugar Road in Pharr. There is no showroom to visit — it is an office, and the crews go to the house. Roofs first, then kitchens, baths and room additions.
-            </p>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              The company is run by Richard, who has spent 20+ years in the roofing trade. That is the reason the inspection comes before the quote here. Somebody who has been on that many roofs can get up on yours and tell you what is actually wrong with it, instead of pricing a guess from the driveway.
-            </p>
-            <p class="text-muted text-lg" style="line-height: 1.7;">
-              We have been a BBB Accredited Business with an A+ rating since 2016. Residential work is all we take — houses, not commercial buildings — and we would rather be the contractor a street keeps calling than the one that turns up after a hail storm and disappears.
-            </p>
-          </div>
-
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing crew finishing a residential shingle roof in Pharr, Texas" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
+    <!-- ============================================================
+         SECTION: intro — single column, no photo
+    ============================================================ -->
+    <section class="section-mid atmo wash-navy-tr py-20" aria-label="About roof replacement in Pharr and the Rio Grande Valley">
+      <div class="max-w-3xl mx-auto px-5 text-center fade-up">
+        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Roof Replacement &middot; Pharr, TX</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
+          New Roofs for Homes Across the Valley
+        </h2>
+        <p class="text-muted text-lg mb-4" style="line-height: 1.7;">
+          There comes a point where a roof stops being worth repairing. The granules are gone, the shingles curl at the edges, and every windy night puts another one in the yard. Patching a roof in that condition is money spent twice.
+        </p>
+        <p class="text-muted text-lg" style="line-height: 1.7;">
+          We replace roofs on homes across Pharr, McAllen, Edinburg, Mission, Weslaco, and San Juan. If you are not sure yet whether you need a full replacement or just a <a href="/services/roof-repair.html" class="body-link">roof repair</a>, start with the free inspection — that is what tells us.
+        </p>
       </div>
     </section>
 
-    <!-- SPLIT 2 (dark): rooted local — text + 2×2 checklist left, one photo right -->
-    <section id="rooted-local" class="dark-section py-24" aria-label="Based in Pharr, working across the Rio Grande Valley">
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SPLIT 1 of 2 — light, photo RIGHT
+    ============================================================ -->
+    <section class="section-dark atmo wash-navy-tr py-24" aria-label="The roof tear-off and replacement process in Pharr">
       <div class="max-w-6xl mx-auto px-5">
         <div class="grid lg:grid-cols-2 gap-14 items-center">
 
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Rooted Local</p>
+          <div class="fade-up lg:order-1">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">The Process</p>
             <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Based in Pharr, Working the Whole Valley
+              What a Full Tear-Off Involves
             </h2>
             <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Pharr is home. From there we work <a href="/areas/mcallen.html" class="body-link">McAllen</a>, <a href="/areas/edinburg.html" class="body-link">Edinburg</a>, <a href="/areas/mission.html" class="body-link">Mission</a>, <a href="/areas/weslaco.html" class="body-link">Weslaco</a> and <a href="/areas/san-juan.html" class="body-link">San Juan</a> regularly, plus Alamo, Palmview, Donna and Mercedes. Hidalgo County is a short drive end to end, which is what makes same-day response a real thing rather than a slogan.
+              We take the old roof off down to the bare wood. That is the part some crews skip by laying new shingles over the old ones, and it is why we do not — you cannot see rotten decking through a layer of shingles, and the new roof only lasts as long as what it is nailed to.
             </p>
             <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
-              Roofing is the main line of work — <a href="/services/roof-repair.html" class="body-link">repairs</a>, full <a href="/services/roof-replacement.html" class="body-link">replacements</a>, and <a href="/services/storm-restoration.html" class="body-link">storm restoration</a> after hail. The same company handles <a href="/services/home-remodeling.html" class="body-link">home remodeling</a> and <a href="/services/room-additions.html" class="body-link">room additions</a> once the roof is sorted out.
+              With the deck exposed we walk it, replace any wood that has gone soft, and then build back up: underlayment, drip edge along the eaves, flashing at every wall and valley, new shingles, and ridge venting so the attic can breathe.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Free roof inspections, always
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Old roof stripped to bare decking
               </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Someone answers 24 hours a day
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Soft or rotten wood replaced
               </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Same-day emergency roof tarping
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                New underlayment and drip edge
               </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Help filing the insurance claim
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Yard swept with a magnet at the end
               </div>
             </div>
           </div>
 
-          <div class="fade-up lg:order-2">
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
             <div class="photo-frame">
               <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing inspecting storm damage on a Rio Grande Valley roof" loading="lazy" />
+              <img src="https://placehold.co/1200x900" alt="Old shingles stripped to bare decking during a roof replacement in Edinburg, Texas" loading="lazy" />
             </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: values -->
-    <section id="values" class="section-mid atmo wash-ember-tl py-20" aria-label="The standards behind every Hidalgo Roofing job">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            What We Hold Every Job To
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Four things decide how a job goes here. They show up on the phone, on the roof, and in what the house looks like when we leave.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Look First, Quote Second</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Nobody prices a roof from the street. We get up there, photograph what is actually happening, and the number comes afterward — in writing.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Answer the Phone</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">24 hours a day, seven days a week. A roof that opens up at 2 a.m. is not a Monday problem, so we do not treat it like one.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Residential Only</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Houses are what we do. Staying in one lane means the crew has already seen your roof&rsquo;s problem, whatever era the house is from.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Still Here Next Year</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">BBB accredited with an A+ rating since 2016. The number on this site still works after the storm season ends and after the job is finished.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: why the Valley trusts us -->
-    <section id="why-us" class="section-dark atmo wash-navy-br py-20" aria-label="Why the Rio Grande Valley trusts Hidalgo Roofing">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Why the Valley Calls Us
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Trust gets earned job by job, across Pharr, McAllen, Edinburg, Mission, Weslaco and San Juan. Here is what keeps the phone ringing.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">BBB A+ Accredited</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">An accredited business with an A+ rating since 2016 — a record you can look up rather than take our word for.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Storm Work Done Right</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Hail and wind damage, <a href="/services/storm-restoration.html" class="body-link">same-day emergency tarping</a>, and damage documented the way an adjuster needs to see it.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Insurance Claim Help</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">We photograph the damage properly and help you file. What the policy pays is between you and your carrier — the paperwork is not something you handle alone.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Roofing and Remodeling</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">One contractor for the roof and for the <a href="/services/home-remodeling.html" class="body-link">kitchen, bath, flooring or room addition</a> underneath it.</p>
           </div>
 
         </div>
@@ -866,9 +978,207 @@
     </section>
 
     <!-- ============================================================
-         SECTION: final-cta — shared partial pattern, page-scoped headline
+         SPLIT 2 of 2 — DARK, photo LEFT
     ============================================================ -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection">
+    <section class="dark-section py-24" aria-label="Choosing roofing material for a new roof in the Rio Grande Valley">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="fade-up lg:order-1">
+            <div class="photo-frame">
+              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
+              <img src="https://placehold.co/1200x900" alt="Architectural shingle and metal roofing samples shown to a homeowner in Mission, Texas" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Choosing a Material</p>
+            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
+              Picking What Goes Back On
+            </h2>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              A replacement is the one time you get to choose. Architectural asphalt shingles are what most Valley homes end up with — they handle the heat, come in every color, and are the most straightforward to repair later if a storm takes a few off.
+            </p>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              Metal costs more at the start and stays on the house far longer. It reflects heat rather than holding it, which shows up in an August electric bill. Impact-resistant shingles sit in between, built on a tougher mat so hail is less likely to bruise them — worth a look given what spring does around here.
+            </p>
+            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
+              We bring samples, explain what each one costs to own rather than just to install, and let you decide. We are not going to push you toward the expensive option.
+            </p>
+            <a href="#included" class="link-arrow">
+              See what every replacement includes
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: whats-included — 6 icon-free centered cards
+    ============================================================ -->
+    <section id="included" class="section-mid atmo wash-ember-tl py-24" aria-label="What's included with every roof replacement">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            What Every Replacement Includes
+          </h2>
+          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
+            Same build on every roof, whether you are in Pharr, McAllen, Edinburg, Mission, Weslaco, or San Juan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up" style="transition-delay: 0.06s;">
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Free Inspection and Written Quote</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">We measure the roof and put the price in writing before anything is torn off. What we quote is what you pay.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Tear-Off to the Deck</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">The old roof comes off completely. We do not lay new shingles over old ones and call it a new roof.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Decking Checked and Repaired</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">With the wood exposed we walk the whole deck and replace anything soft. We show you the bad boards before they go in the dumpster.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">New Underlayment and Flashing</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">Underlayment, drip edge, and flashing at every wall and valley all go on new. Old flashing is where new roofs start leaking.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Material Options Explained</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">Shingle, metal, or impact-resistant — we bring samples and explain the trade-offs instead of steering you.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Property Protected, Yard Swept</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">We cover the landscaping, haul off every scrap, and run a magnet across the yard and driveway before we leave.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: faq — 6 Q&As, mirrors the FAQPage JSON-LD exactly
+    ============================================================ -->
+    <section id="faq" class="section-dark atmo wash-ember-tl py-20" aria-label="Roof replacement questions from Pharr and Rio Grande Valley homeowners">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Good to Know</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            Roof Replacement Questions
+          </h2>
+        </div>
+
+        <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);" open>
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How long does it take to replace a roof?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Most houses in the Valley are a one to two day job once we start — tear-off in the morning, dry-in the same day, and finish out after that. Bigger or steeper roofs take longer. We will give you a timeframe with the quote so you can plan around it.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do I need to move out while you work?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">No. You can stay in the house. It is loud, and there will be a dumpster in the driveway for a day or two, but the work happens entirely outside. We will tell you where to move vehicles before we start.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Can you put a new roof over the old one?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">We do not. Layering over the old shingles hides the decking, and if the wood underneath has gone soft you will not find out until the new roof starts failing. Tearing off costs a bit more and is the reason the new roof lasts.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How much does a roof replacement cost?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">It comes down to the size and pitch of the roof, the material you choose, and what the decking looks like once the old shingles are off. That is why there is no number on this page. The inspection is free and the quote is in writing before work begins.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              What happens if you find rotten decking?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">We stop and show you. Replacing bad decking is extra wood and extra labor, so it is not included in a blind quote — but you will see the boards yourself and approve the change before we carry on. Nothing gets added to the bill without you seeing why.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How do I know if I need a replacement or just a repair?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">If the damage is in one area and the rest of the roof still has granules and lies flat, a <a href="/services/roof-repair.html" class="body-link">roof repair</a> is usually the answer. If shingles are curling and bald across the whole surface, replacement is the cheaper road over time. The free inspection settles it, and we will show you the photos either way.</div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: related-services — compact in-body cross-links
+    ============================================================ -->
+    <section class="section-mid atmo wash-navy-tr py-12" aria-label="Other services at Hidalgo Roofing and Remodeling">
+      <div class="max-w-4xl mx-auto px-5 text-center fade-up">
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 12px;">Explore More Services</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm">
+          <a href="/services/roofing.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Roofing</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/storm-restoration.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Storm Restoration</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/roof-repair.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Roof Repair</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/home-remodeling.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Home Remodeling</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/room-additions.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Room Additions</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: final-cta — shared partial pattern, identical markup to the
+         flagship. Intake is the REAL one from CLAUDE.md (free inspection /
+         book an appointment -> GHL form at /#contact). Never "Get a Free Quote".
+    ============================================================ -->
+    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection for a replacement">
       <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
       <!-- PLACEHOLDER: brand_assets/cta-background.jpg does not exist yet (LAUNCH BLOCKER) -->
       <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080') center center / cover no-repeat;"></div>
@@ -883,10 +1193,10 @@
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
         <h2 class="font-display text-4xl lg:text-5xl font-extrabold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Want the Roof<br />Looked At?<br /><span style="color: var(--color-accent-bright);">Start Free.</span>
+          Time for a<br />New Roof?<br /><span style="color: var(--color-accent-bright);">Find Out for Free.</span>
         </h2>
         <p class="text-muted text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
-          Book a free roof inspection and we will get up there, photograph what we find, and hand you a written quote. Leaking right now? Call — we answer 24/7 and can tarp it today.
+          We will measure the roof, show you what shape it is really in, walk you through the material options, and put a written quote in your hands. No cost and no obligation.
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
           <a href="tel:+19564603489" class="btn-primary text-base px-8 py-4">
@@ -908,11 +1218,11 @@
           </span>
           <span class="flex items-center gap-1.5 text-muted text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Same-day emergency tarping
+            Full tear-off, never a layover
           </span>
           <span class="flex items-center gap-1.5 text-muted text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Insurance claim help
+            Written quote up front
           </span>
         </div>
       </div>
@@ -964,7 +1274,7 @@
             <li><a href="/services/roofing.html"            class="text-muted text-sm hover:text-white transition-colors duration-150">Roofing</a></li>
             <li><a href="/services/storm-restoration.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">Storm Restoration</a></li>
             <li><a href="/services/roof-repair.html"        class="text-muted text-sm hover:text-white transition-colors duration-150">Roof Repair</a></li>
-            <li><a href="/services/roof-replacement.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Roof Replacement</a></li>
+            <li><a href="/services/roof-replacement.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">Roof Replacement</a></li>
             <li><a href="/services/home-remodeling.html"    class="text-muted text-sm hover:text-white transition-colors duration-150">Home Remodeling</a></li>
             <li><a href="/services/room-additions.html"     class="text-muted text-sm hover:text-white transition-colors duration-150">Room Additions</a></li>
           </ul>
@@ -974,7 +1284,7 @@
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">About Us</a></li>
+            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
             <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>

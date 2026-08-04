@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX</title>
-  <meta name="description" content="BBB A+ accredited residential roofing &amp; remodeling in Pharr, TX. 24/7 answer, same-day emergency tarping, free roof inspections across the Rio Grande Valley." />
-  <meta name="keywords" content="about Hidalgo Roofing, roofing company Pharr TX, roofing contractor Pharr, BBB accredited roofer Rio Grande Valley, residential roofer Hidalgo County, remodeling contractor Pharr TX" />
+  <title>Roofing &amp; Remodeling in Weslaco, TX | Hidalgo Roofing</title>
+  <meta name="description" content="Weslaco, TX roofing, storm restoration &amp; remodeling for the Mid-Valley. BBB A+ accredited, 24/7 service, free roof inspections across Weslaco." />
+  <meta name="keywords" content="roofing Weslaco TX, roofer Weslaco, roof repair Weslaco TX, roof replacement Weslaco, storm damage roof Weslaco TX, mid-valley roofing contractor, remodeling contractor Weslaco TX" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/areas/weslaco.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta property="og:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections. Call (956) 460-3489." />
-  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <meta property="og:title" content="Roofing &amp; Remodeling in Weslaco, TX | Hidalgo Roofing" />
+  <meta property="og:description" content="Roofing, storm restoration and remodeling for Weslaco, TX. BBB A+ accredited, 24/7 answer, free roof inspections. Call (956) 460-3489." />
+  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/areas/weslaco.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch (LAUNCH BLOCKER) -->
   <meta property="og:image:width" content="1200" />
@@ -22,8 +22,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta name="twitter:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections." />
+  <meta name="twitter:title" content="Roofing &amp; Remodeling in Weslaco, TX | Hidalgo Roofing" />
+  <meta name="twitter:description" content="Roofing, storm restoration and remodeling for Weslaco, TX. BBB A+ accredited, 24/7 answer, free roof inspections." />
   <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -442,30 +442,17 @@
   </style>
 
   <!-- ============================================================
-       ABOUT-PAGE SCHEMA — 3 blocks:
-         1) AboutPage, pointing at the homepage business node.
-         2) LocalBusiness REF — same @id as the homepage business node, so
-            this is a reference, NOT a second declaration. Address, hours,
-            offer catalog and aggregateRating stay on the homepage only.
+       CITY-PAGE SCHEMA — 3 blocks:
+         1) LocalBusiness REF — same @id as the homepage business node, so this
+            is a reference to that entity, NOT a second declaration. Address,
+            hours and offer catalog stay on the homepage only.
+         2) FAQPage — 5 city-scoped Q&As (min 4), text derived from the
+            visible accordion so the two can never drift.
          3) BreadcrumbList.
-       No staff/employee, foundingDate or award property is emitted — those
-       are [NEEDS INPUT] in CLAUDE.md and must not be invented.
+       areaServed = Weslaco ONLY — never the full city list.
   ============================================================ -->
 
-  <!-- 1/3 — AboutPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://www.hidalgoroofingremodelingtx.com/about.html#aboutpage",
-    "url": "https://www.hidalgoroofingremodelingtx.com/about.html",
-    "name": "About Hidalgo Roofing & Remodeling",
-    "description": "A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, Texas, serving the Rio Grande Valley.",
-    "about": { "@id": "https://www.hidalgoroofingremodelingtx.com/#business" }
-  }
-  </script>
-
-  <!-- 2/3 — LocalBusiness reference -->
+  <!-- 1/3 — LocalBusiness reference -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -474,7 +461,65 @@
     "name": "Hidalgo Roofing & Remodeling LLC",
     "url": "https://www.hidalgoroofingremodelingtx.com/",
     "telephone": "+19564603489",
-    "email": "hidalgoroofing9@gmail.com"
+    "areaServed": {
+      "@type": "City",
+      "name": "Weslaco",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    }
+  }
+  </script>
+
+  <!-- 2/3 — FAQPage (5 city-scoped Q&As) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.hidalgoroofingremodelingtx.com/areas/weslaco.html#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Weslaco is on the east side of the county. Do you really come out here?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Regularly. Our office is in Pharr and Weslaco is a straight run east on Expressway 83. The Mid-Valley is part of our normal week, not an exception we make for the occasional job."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "It hailed in Weslaco but not in McAllen. Does that matter for a claim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "What matters is your roof. Storm cells in the Valley run narrow — one town gets hit and the next stays dry. An adjuster wants documentation of your house, so we get up there, photograph the damage, and help you file. What the policy pays is between you and your carrier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My house near downtown Weslaco has a flat porch roof that always leaks. Can you fix that?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That is one of the more common calls we get in old Weslaco. Low-slope porches, carports and add-ons drain badly and fail long before the shingles do. They need a different material and a different detail than the main roof. We will look at both and tell you whether it is a repair or a replacement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How soon can you get here if my roof is leaking right now?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Same day in most cases. Someone answers 24/7, and if water is coming in we tarp it first and schedule the real work after. Say on the call that it is actively leaking so it goes to the front of the line."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do remodeling in Weslaco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — home remodeling such as kitchens, baths, flooring, drywall, windows and doors, plus room additions, across Weslaco and the Mid-Valley. Roofing is the main line of work, but the same company handles both."
+        }
+      }
+    ]
   }
   </script>
 
@@ -493,8 +538,14 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "About",
-        "item": "https://www.hidalgoroofingremodelingtx.com/about.html"
+        "name": "Areas We Serve",
+        "item": "https://www.hidalgoroofingremodelingtx.com/#service-area"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Weslaco",
+        "item": "https://www.hidalgoroofingremodelingtx.com/areas/weslaco.html"
       }
     ]
   }
@@ -548,12 +599,12 @@
             <a href="/areas/mcallen.html">McAllen</a>
             <a href="/areas/edinburg.html">Edinburg</a>
             <a href="/areas/mission.html">Mission</a>
-            <a href="/areas/weslaco.html">Weslaco</a>
+            <a href="/areas/weslaco.html" aria-current="page">Weslaco</a>
             <a href="/areas/san-juan.html">San Juan</a>
           </div>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150" aria-current="page">About</a>
+        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
         <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
         <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
@@ -598,11 +649,11 @@
           <a href="/areas/mcallen.html">McAllen</a>
           <a href="/areas/edinburg.html">Edinburg</a>
           <a href="/areas/mission.html">Mission</a>
-          <a href="/areas/weslaco.html">Weslaco</a>
+          <a href="/areas/weslaco.html" aria-current="page">Weslaco</a>
           <a href="/areas/san-juan.html">San Juan</a>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium" aria-current="page">About</a>
+        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
         <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
@@ -611,10 +662,11 @@
       </div>
     </div>
   </nav>
+
   <!-- ============================================================
-       HERO (full-height, hero-background photo slot)
+       HERO
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="About Hidalgo Roofing and Remodeling">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Roofing and remodeling in Weslaco, Texas">
 
     <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
     <!-- Hero video: shared site-wide clip. brand_assets/hero-background.mp4 (H.264, no
@@ -649,22 +701,24 @@
         <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span class="sep" aria-hidden="true">/</span>
-          <span class="current">About</span>
+          <a href="/#service-area">Areas We Serve</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span class="current">Weslaco</span>
         </nav>
 
         <div class="mb-6">
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 52px; width: auto; max-height: 60px; display: block;" />
         </div>
 
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Roofing &amp; Remodeling &middot; Pharr, TX</p>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Serving Weslaco, TX &middot; Hidalgo County</p>
 
         <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          About<br />
-          <span style="color: var(--color-accent-bright);">Hidalgo Roofing.</span>
+          Roofing &amp; Remodeling<br />in Weslaco, TX —<br />
+          <span style="color: var(--color-accent-bright);">A Short Run East.</span>
         </h1>
 
         <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          A residential roofing and remodeling contractor working out of Pharr and across the Rio Grande Valley. Someone answers the phone around the clock, and <strong style="color: var(--color-bg);">every roof starts with a free inspection</strong>.
+          Weslaco is a straight run east on Expressway 83 from our Pharr office, and the Mid-Valley is part of our regular week. Roof repairs, full replacements, hail damage, and remodeling — <strong style="color: var(--color-bg);">with a free inspection before any quote</strong>.
         </p>
 
         <div class="flex flex-wrap gap-4 mb-10">
@@ -705,170 +759,231 @@
   ============================================================ -->
   <main id="main-content">
 
-    <!-- SPLIT 1 (light): our story — text left, one photo right.
-         Owner is named ONCE here, first name only, in the dedicated
-         owner reference — never in a heading, meta, OG or CTA
-         (CLAUDE.md: never publish a last name for Richard). -->
-    <section id="our-story" class="section-dark atmo wash-navy-tr py-24" aria-label="The Hidalgo Roofing story">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Our Story</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Roofing and Remodeling, Run Out of Pharr
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Hidalgo Roofing &amp; Remodeling is a locally owned residential contractor based at 415 North Sugar Road in Pharr. There is no showroom to visit — it is an office, and the crews go to the house. Roofs first, then kitchens, baths and room additions.
-            </p>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              The company is run by Richard, who has spent 20+ years in the roofing trade. That is the reason the inspection comes before the quote here. Somebody who has been on that many roofs can get up on yours and tell you what is actually wrong with it, instead of pricing a guess from the driveway.
-            </p>
-            <p class="text-muted text-lg" style="line-height: 1.7;">
-              We have been a BBB Accredited Business with an A+ rating since 2016. Residential work is all we take — houses, not commercial buildings — and we would rather be the contractor a street keeps calling than the one that turns up after a hail storm and disappears.
-            </p>
-          </div>
-
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing crew finishing a residential shingle roof in Pharr, Texas" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
+    <!-- CITY-SWAP: intro -->
+    <section class="section-mid atmo wash-navy-tr py-20" aria-label="About our roofing work in Weslaco">
+      <div class="max-w-3xl mx-auto px-5 text-center fade-up">
+        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Roofing &amp; Remodeling &middot; Weslaco, TX</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
+          Roofing and Remodeling in Weslaco, Texas
+        </h2>
+        <p class="text-muted text-lg mb-4" style="line-height: 1.7;">
+          Weslaco is the Mid-Valley, and it is a straight run east on Expressway 83 from our office at 415 North Sugar Road in Pharr. The town went up in 1919, about ten years after most of its neighbors, and you can still read that in the housing — a tight historic core along Texas Boulevard with decades of building spreading out from it.
+        </p>
+        <p class="text-muted text-lg" style="line-height: 1.7;">
+          We do <a href="/services/roof-repair.html" class="body-link">roof repair</a>, full <a href="/services/roof-replacement.html" class="body-link">roof replacement</a>, <a href="/services/storm-restoration.html" class="body-link">storm restoration</a>, and remodeling out here. Weslaco sits far enough east that a storm cell can work it over and leave Pharr dry, which is a good reason to have someone look rather than assume. The inspection is free.
+        </p>
       </div>
     </section>
+    <!-- END CITY-SWAP: intro -->
 
-    <!-- SPLIT 2 (dark): rooted local — text + 2×2 checklist left, one photo right -->
-    <section id="rooted-local" class="dark-section py-24" aria-label="Based in Pharr, working across the Rio Grande Valley">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Rooted Local</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Based in Pharr, Working the Whole Valley
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Pharr is home. From there we work <a href="/areas/mcallen.html" class="body-link">McAllen</a>, <a href="/areas/edinburg.html" class="body-link">Edinburg</a>, <a href="/areas/mission.html" class="body-link">Mission</a>, <a href="/areas/weslaco.html" class="body-link">Weslaco</a> and <a href="/areas/san-juan.html" class="body-link">San Juan</a> regularly, plus Alamo, Palmview, Donna and Mercedes. Hidalgo County is a short drive end to end, which is what makes same-day response a real thing rather than a slogan.
-            </p>
-            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
-              Roofing is the main line of work — <a href="/services/roof-repair.html" class="body-link">repairs</a>, full <a href="/services/roof-replacement.html" class="body-link">replacements</a>, and <a href="/services/storm-restoration.html" class="body-link">storm restoration</a> after hail. The same company handles <a href="/services/home-remodeling.html" class="body-link">home remodeling</a> and <a href="/services/room-additions.html" class="body-link">room additions</a> once the roof is sorted out.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Free roof inspections, always
-              </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Someone answers 24 hours a day
-              </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Same-day emergency roof tarping
-              </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Help filing the insurance claim
-              </div>
-            </div>
-          </div>
-
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing inspecting storm damage on a Rio Grande Valley roof" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: values -->
-    <section id="values" class="section-mid atmo wash-ember-tl py-20" aria-label="The standards behind every Hidalgo Roofing job">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            What We Hold Every Job To
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Four things decide how a job goes here. They show up on the phone, on the roof, and in what the house looks like when we leave.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Look First, Quote Second</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Nobody prices a roof from the street. We get up there, photograph what is actually happening, and the number comes afterward — in writing.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Answer the Phone</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">24 hours a day, seven days a week. A roof that opens up at 2 a.m. is not a Monday problem, so we do not treat it like one.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Residential Only</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Houses are what we do. Staying in one lane means the crew has already seen your roof&rsquo;s problem, whatever era the house is from.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Still Here Next Year</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">BBB accredited with an A+ rating since 2016. The number on this site still works after the storm season ends and after the job is finished.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: why the Valley trusts us -->
-    <section id="why-us" class="section-dark atmo wash-navy-br py-20" aria-label="Why the Rio Grande Valley trusts Hidalgo Roofing">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Why the Valley Calls Us
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Trust gets earned job by job, across Pharr, McAllen, Edinburg, Mission, Weslaco and San Juan. Here is what keeps the phone ringing.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">BBB A+ Accredited</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">An accredited business with an A+ rating since 2016 — a record you can look up rather than take our word for.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Storm Work Done Right</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Hail and wind damage, <a href="/services/storm-restoration.html" class="body-link">same-day emergency tarping</a>, and damage documented the way an adjuster needs to see it.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Insurance Claim Help</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">We photograph the damage properly and help you file. What the policy pays is between you and your carrier — the paperwork is not something you handle alone.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Roofing and Remodeling</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">One contractor for the roof and for the <a href="/services/home-remodeling.html" class="body-link">kitchen, bath, flooring or room addition</a> underneath it.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <div class="divider"></div>
 
     <!-- ============================================================
-         SECTION: final-cta — shared partial pattern, page-scoped headline
+         COVERAGE SPLIT — text + local-anchor checklist / one photo
     ============================================================ -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection">
+    <section class="section-dark atmo wash-navy-tr py-24" aria-label="Where we work in Weslaco">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="fade-up lg:order-1">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Our Coverage</p>
+            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
+              Where We Work in Weslaco
+            </h2>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              We work all of Weslaco — the historic downtown blocks on Texas Boulevard, the neighborhoods around Knapp Medical Center, the streets off Airport Drive, and the newer building out toward the expressway.
+            </p>
+            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
+              The older core has roofs that have been redone two or three times, often with a porch, carport or add-on at almost no pitch that leaks long before the main roof does. Newer parts of town are simpler — usually hail, sometimes a detail that got rushed. We look at both the same way: up close, with a camera.
+            </p>
+
+            <!-- CITY-SWAP: local-anchors -->
+            <!-- Every anchor below was web-verified for this build (historic downtown on Texas Blvd, south of Old Business 83; Knapp Medical Center at 1401 E Eighth St; Mid Valley Airport and Airport Dr; S International Blvd / FM 1015 toward Estero Llano Grande State Park; Expressway 83 / I-2). Streets and public landmarks only — no residential subdivision is named by design. -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Historic downtown along Texas Boulevard
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Neighborhoods near Knapp Medical Center
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Streets off Airport Drive and the Mid Valley Airport side
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                The Business 83 corridor through town
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Anywhere along Expressway 83 and I-2
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                South Weslaco toward International Boulevard
+              </div>
+            </div>
+            <!-- END CITY-SWAP: local-anchors -->
+          </div>
+
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
+            <div class="photo-frame">
+              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
+              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing crew replacing a residential shingle roof in Weslaco, Texas" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CITY-SWAP: why-city -->
+    <!-- DARK section, 2-column checklist, no photo, no icons (per TEMPLATE-SPEC) -->
+    <section class="dark-section py-24" aria-label="Why Weslaco homeowners choose Hidalgo Roofing">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Why Weslaco Calls Us</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            What Weslaco Homeowners Can Count On
+          </h2>
+          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
+            Weslaco sees the same out-of-town crews roll in after every hail event. Here is the difference with a contractor whose office is a few exits west and stays there.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-7 fade-up" style="transition-delay: 0.06s;">
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Same Expressway, Short Drive</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">Our office is on North Sugar Road in Pharr, straight down I-2. Weslaco is a regular stop on our week, not a special trip we charge extra for.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Mid-Valley Storms Are Their Own Thing</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">A cell can hammer Weslaco and leave Pharr completely dry. If it hailed on your street, have the roof looked at even if the storm made the news somewhere else.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Old Cores and Low Slopes</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">The blocks near downtown carry a lot of porches, carports and add-ons with barely any pitch. Those leak first and they need a different fix than the main roof. We check them.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Answered Around the Clock</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">24 hours a day, seven days a week, with same-day emergency tarping when water is already coming inside.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">BBB A+ Since 2016</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">Accredited, A+ rated, and still reachable next year when a question comes up. Not a number that stops working when the season ends.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Roofing and Remodeling Both</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">20+ years in the roofing trade, plus kitchens, baths, flooring, windows and room additions. One company for the whole house.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CITY-SWAP: why-city -->
+
+    <div class="divider"></div>
+
+    <!-- CITY-SWAP: faq -->
+    <section id="faq" class="section-dark atmo wash-ember-tl py-20" aria-label="Weslaco roofing questions">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Good to Know</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            Weslaco Questions
+          </h2>
+        </div>
+
+        <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);" open>
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Weslaco is on the east side of the county. Do you really come out here?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Regularly. Our office is in Pharr and Weslaco is a straight run east on Expressway 83. The Mid-Valley is part of our normal week, not an exception we make for the occasional job.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              It hailed in Weslaco but not in McAllen. Does that matter for a claim?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">What matters is your roof. Storm cells in the Valley run narrow — one town gets hit and the next stays dry. An adjuster wants documentation of your house, so we get up there, photograph the damage, and help you file. What the policy pays is between you and your carrier.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              My house near downtown Weslaco has a flat porch roof that always leaks. Can you fix that?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">That is one of the more common calls we get in old Weslaco. Low-slope porches, carports and add-ons drain badly and fail long before the shingles do. They need a different material and a different detail than the main roof. We will look at both and tell you whether it is a repair or a replacement.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How soon can you get here if my roof is leaking right now?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Same day in most cases. Someone answers 24/7, and if water is coming in we tarp it first and schedule the real work after. Say on the call that it is actively leaking so it goes to the front of the line.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you do remodeling in Weslaco?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes — <a href="/services/home-remodeling.html" class="body-link">home remodeling</a> such as kitchens, baths, flooring, drywall, windows and doors, plus <a href="/services/room-additions.html" class="body-link">room additions</a>, across Weslaco and the Mid-Valley. Roofing is the main line of work, but the same company handles both.</div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+    <!-- END CITY-SWAP: faq -->
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: final-cta — shared partial pattern, city-scoped headline
+    ============================================================ -->
+    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection in Weslaco">
       <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
       <!-- PLACEHOLDER: brand_assets/cta-background.jpg does not exist yet (LAUNCH BLOCKER) -->
       <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080') center center / cover no-repeat;"></div>
@@ -883,7 +998,7 @@
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
         <h2 class="font-display text-4xl lg:text-5xl font-extrabold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Want the Roof<br />Looked At?<br /><span style="color: var(--color-accent-bright);">Start Free.</span>
+          Need a Roofer<br />in Weslaco?<br /><span style="color: var(--color-accent-bright);">We Are Down 83.</span>
         </h2>
         <p class="text-muted text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
           Book a free roof inspection and we will get up there, photograph what we find, and hand you a written quote. Leaking right now? Call — we answer 24/7 and can tarp it today.
@@ -974,7 +1089,7 @@
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">About Us</a></li>
+            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
             <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>
@@ -990,7 +1105,7 @@
             <li><a href="/areas/mcallen.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">McAllen</a></li>
             <li><a href="/areas/edinburg.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">Edinburg</a></li>
             <li><a href="/areas/mission.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Mission</a></li>
-            <li><a href="/areas/weslaco.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Weslaco</a></li>
+            <li><a href="/areas/weslaco.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">Weslaco</a></li>
             <li><a href="/areas/san-juan.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">San Juan</a></li>
           </ul>
         </div>

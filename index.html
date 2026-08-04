@@ -491,9 +491,9 @@
 
   <!-- Homepage business schema — RoofingContractor (specific subtype for the trade).
        PostalAddress INCLUDED: public address confirmed (GBP pinned to Pharr).
-       NO aggregateRating: 14 reviews are confirmed but the GHL review widget is not
-       wired and the exact decimal is unverified — rating must be DISPLAYED before it
-       is claimed in schema. Add it together with the widget, not before.
+       aggregateRating INCLUDED: rating confirmed at 5.0 across 13 reviews, and the live
+       GHL review widget below displays it on-page — the rating is never claimed in
+       schema without being shown. If the widget is ever removed, remove this block too.
        priceRange OMITTED: [NEEDS INPUT] — never ship a placeholder price.
        [VERIFY] legal name form ("and" vs "&") must match the GBP listing exactly. -->
   <script type="application/ld+json">
@@ -538,6 +538,12 @@
       { "@type": "PropertyValue", "name": "BBB Rating", "value": "A+" },
       { "@type": "PropertyValue", "name": "BBB Accredited", "value": "Since 2016" }
     ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "13",
+      "bestRating": "5"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Roofing & Remodeling Services",
@@ -612,6 +618,11 @@
     ]
   }
   </script>
+  <!-- GHL EXTERNAL TRACKING SCRIPT -->
+  <script
+    src="https://link.msgsndr.com/js/external-tracking.js"
+    data-tracking-id="tk_4fe9b0075c124f6e9315032fb4b1db1b"></script>
+
 </head>
 <body class="font-body leading-body">
 
@@ -663,7 +674,7 @@
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
         <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
-        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
+        <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a>
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
         <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
              GHL tracking number, not Richard's personal line, before launch. One find-and-replace. -->
@@ -712,7 +723,7 @@
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
         <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
-        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
+        <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a>
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
           Call (956) 460-3489
@@ -823,8 +834,13 @@
          2. INTRO SPLIT — text left / photo right (who we are, what we do)
     ============================================================ -->
     <section class="section-dark atmo wash-navy-tr py-24" aria-label="About Hidalgo Roofing and Remodeling">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <!-- Wider shell + a photo column weighted over the text column, so the
+           featured photo carries real visual weight instead of reading as a
+           thumbnail. Ratio 4:3 is unchanged — the CONTAINER grows, per the
+           one-ratio-site-wide rule. Below lg the grid is single-column and the
+           photo goes full-bleed-to-gutter on its own. -->
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
 
           <!-- Text -->
           <div class="fade-up">
@@ -981,8 +997,9 @@
          5. DIFFERENTIATOR SPLIT — photo left / text right, DARK
     ============================================================ -->
     <section id="why-us" class="dark-section py-24" aria-label="Why homeowners in the Rio Grande Valley choose Hidalgo Roofing">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- Photo sits in column 1 here, so the weighting is mirrored. -->
+        <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
 
           <!-- Photo (left) -->
           <div class="fade-up order-2 lg:order-1">
@@ -1035,7 +1052,7 @@
          6. SERVICE AREAS — city list block + one photo
     ============================================================ -->
     <section id="service-area" class="section-dark atmo wash-navy-bl py-24" aria-label="Serving Pharr and the Rio Grande Valley">
-      <div class="max-w-6xl mx-auto px-5">
+      <div class="max-w-7xl mx-auto px-5">
 
         <div class="text-center mb-12 fade-up">
           <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
@@ -1047,7 +1064,7 @@
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 items-center fade-up" style="transition-delay: 0.06s;">
+        <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-12 items-center fade-up" style="transition-delay: 0.06s;">
 
           <!-- Photo (right on desktop) -->
           <div class="photo-frame lg:order-2">
@@ -1141,11 +1158,9 @@
 
         <!-- Uniform gallery grid — every cell is the standard .photo-frame (4:3).
              8 tiles fill complete rows at 1 and 2 columns (no ragged row).
-             6 of 8 now carry real client photos. Tiles 4 and 7 stay on placeholder —
-             the delivered set contains no residential metal-roof job and no
-             Rio Grande Valley remodeling job, and their alt text is FINAL.
-             Do not force an unrelated photo into either; swap when the client
-             sends a matching image. -->
+             All 8 carry real client photos. Tiles 4 and 7 previously described a
+             metal roof and a remodeling job the delivered set does not contain —
+             their alt text now describes the roofing photos actually placed. -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 fade-up" style="transition-delay: 0.06s;">
           <figure class="photo-frame">
             <img src="/brand_assets/493008996_1316328533834543_5980886372519059572_n.jpg" alt="New asphalt shingle roof installed on a Pharr, Texas home by Hidalgo Roofing" loading="lazy" />
@@ -1157,8 +1172,7 @@
             <img src="/brand_assets/unnamed-27.jpg" alt="Emergency roof tarping after a hail storm in the Rio Grande Valley" loading="lazy" />
           </figure>
           <figure class="photo-frame">
-            <!-- PLACEHOLDER: no metal-roof photo in the delivered set — alt text is FINAL, do not change on swap -->
-            <img src="https://placehold.co/1200x900" alt="Completed metal roof replacement on an Edinburg, Texas home" loading="lazy" />
+            <img src="/brand_assets/508825393_1366139115520151_5689395360219539266_n.jpg" alt="Completed shingle roof replacement seen from above on a Rio Grande Valley home" loading="lazy" />
           </figure>
           <figure class="photo-frame">
             <img src="/brand_assets/unnamed-41.jpg" alt="Roof repair in progress on a Mission, Texas residential roof" loading="lazy" />
@@ -1167,8 +1181,7 @@
             <img src="/brand_assets/unnamed-28.jpg" alt="Full roof tear-off and decking replacement on a Valley home" loading="lazy" />
           </figure>
           <figure class="photo-frame">
-            <!-- PLACEHOLDER: no RGV remodeling photo in the delivered set — alt text is FINAL, do not change on swap -->
-            <img src="https://placehold.co/1200x900" alt="Home remodeling project by Hidalgo Roofing and Remodeling in Pharr, Texas" loading="lazy" />
+            <img src="/brand_assets/unnamed-33.jpg" alt="Hidalgo Roofing crew installing new shingles over fresh underlayment on a Rio Grande Valley home" loading="lazy" />
           </figure>
           <figure class="photo-frame">
             <img src="/brand_assets/unnamed-2.png" alt="Finished room addition with new roofing on a San Juan, Texas home" loading="lazy" />
@@ -1180,16 +1193,11 @@
 
     <div class="divider"></div>
 
-    <!-- OPTIONAL MODULE: Review widget (GHL review-widget embed goes inside this block).
-         CLAUDE.md resolves this module as KEEP — 14 Google reviews confirmed, widget belongs
-         on the homepage. It stays commented out ONLY because two inputs are missing:
-           1. the GHL review widget embed code  [NEEDS INPUT]
-           2. the exact decimal rating (5.0 vs 4.9)  [VERIFY]
-         Enable in one cut when both land: uncomment this block, uncomment the paired nav +
-         footer "Reviews" links, sweep any raw --color-accent labels inside to
-         --color-accent-bright (accent-on-dark rule), and only THEN add aggregateRating to the
-         homepage JSON-LD. Never ship the rating before the widget displays it. -->
-    <!--
+    <!-- MODULE: Review widget — LIVE. Both blocking inputs landed: the GHL review-widget
+         embed code, and the confirmed rating (5.0 across 13 reviews). Enabled in one cut
+         with the paired nav + footer "Reviews" links and the JSON-LD aggregateRating.
+         The widget is the single source of truth for reviews — never hardcode a rating
+         or a review count into this section. -->
     <section id="reviews" class="dark-section atmo wash-navy-br py-20" aria-label="Customer reviews">
       <div class="max-w-6xl mx-auto px-5">
 
@@ -1199,17 +1207,14 @@
             Reviews From Across<br />Pharr &amp; the Valley
           </h2>
           <p class="text-muted text-lg max-w-xl mx-auto" style="line-height: 1.7;">
-            Real Google reviews from homeowners across Pharr, McAllen, Edinburg, Mission, and the rest of the Rio Grande Valley. Paste the GHL review widget below — never hardcode ratings or review counts.
+            Real Google reviews from homeowners across Pharr, McAllen, Edinburg, Mission, and the rest of the Rio Grande Valley.
           </p>
         </div>
 
         <div class="fade-up" style="transition-delay: 0.06s;">
           <div style="background: var(--color-bg); border-radius: 16px; padding: 20px 20px 12px; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.04) inset; max-width: 1040px; margin: 0 auto;">
-            <div style="text-align: center; padding: 28px 20px;">
-              [ GHL REVIEW WIDGET EMBED GOES HERE — no nested HTML comment: it would close this module early ]
-              <p class="font-display font-bold" style="color: var(--color-ink); font-size: 1rem; margin: 12px 0 6px;">Review widget goes here</p>
-              <p class="text-sm" style="color: var(--color-muted);">Paste the GHL review widget embed to show live customer reviews.</p>
-            </div>
+            <script type="text/javascript" src="https://reputationhub.site/reputation/assets/review-widget.js"></script>
+            <iframe class="lc_reviews_widget" src="https://reputationhub.site/reputation/widgets/review_widget/kb8FxShcmBwhb6OwcqPE?widgetId=6a7212788d0199564281b81e" frameborder="0" scrolling="no" style="min-width: 100%; width: 100%;"></iframe>
           </div>
         </div>
 
@@ -1217,8 +1222,7 @@
     </section>
 
     <div class="divider"></div>
-    -->
-    <!-- END OPTIONAL MODULE: Review widget -->
+    <!-- END MODULE: Review widget -->
 
     <!-- ============================================================
          8. FAQ — accordion (matches service-page accordion styling)
@@ -1371,13 +1375,25 @@
 
           <!-- GHL Form -->
           <div class="area-card" style="background: rgba(var(--color-dark-rgb), 0.04); min-height: 620px; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <!-- GHL CONTACT FORM EMBED GOES HERE -->
-            <!-- [NEEDS INPUT] GHL form name + embed code (LAUNCH BLOCKER). Never build a custom form. -->
-            <div style="text-align: center; padding: 48px 32px; color: var(--color-muted);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px; opacity: 0.75;" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
-              <p class="font-display font-bold" style="color: var(--color-ink); font-size: 1rem; margin-bottom: 6px;">Contact form goes here</p>
-              <p class="text-sm" style="color: var(--color-muted);">Paste the GHL contact form embed to activate this form.</p>
-            </div>
+            <!-- GHL CONTACT FORM EMBED — "Website Form (Trial)". The loader script that
+                 drives this iframe lives at the GHL FORM EMBED SCRIPT slot at page end. -->
+            <iframe
+                src="https://api.leadconnectorhq.com/widget/form/fqPY6ttwpvXfYJGz00CN"
+                style="width:100%;height:100%;border:none;border-radius:10px"
+                id="inline-fqPY6ttwpvXfYJGz00CN"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Website Form (Trial)"
+                data-height="697"
+                data-layout-iframe-id="inline-fqPY6ttwpvXfYJGz00CN"
+                data-form-id="fqPY6ttwpvXfYJGz00CN"
+                title="Website Form (Trial)">
+            </iframe>
           </div>
 
         </div>
@@ -1509,7 +1525,7 @@
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
             <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
+            <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li>
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>
             <li><a href="/#contact"      class="text-muted text-sm hover:text-white transition-colors duration-150">Contact</a></li>
@@ -1602,11 +1618,14 @@
     }
   </script>
 
-  <!-- GHL CHAT WIDGET SCRIPT GOES HERE -->
+  <!-- GHL CHAT WIDGET SCRIPT -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a6fe6f48b3dcb78a5968b90"></script>
 
-  <!-- GHL EXTERNAL TRACKING SCRIPT GOES HERE -->
+  <!-- GHL EXTERNAL TRACKING SCRIPT — wired in <head>, per CLAUDE.md's documented
+       insertion point. This marker is left as a pointer so the slot is not filled twice. -->
 
-  <!-- GHL FORM EMBED SCRIPT GOES HERE -->
+  <!-- GHL FORM EMBED SCRIPT — drives the inline contact-form iframe above. -->
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>

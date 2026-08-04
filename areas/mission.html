@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX</title>
-  <meta name="description" content="BBB A+ accredited residential roofing &amp; remodeling in Pharr, TX. 24/7 answer, same-day emergency tarping, free roof inspections across the Rio Grande Valley." />
-  <meta name="keywords" content="about Hidalgo Roofing, roofing company Pharr TX, roofing contractor Pharr, BBB accredited roofer Rio Grande Valley, residential roofer Hidalgo County, remodeling contractor Pharr TX" />
+  <title>Roofing &amp; Remodeling in Mission, TX | Hidalgo Roofing</title>
+  <meta name="description" content="Mission, TX roofing, storm restoration &amp; remodeling from Sharyland to Bentsen Palm. BBB A+ accredited, 24/7 service, free roof inspections." />
+  <meta name="keywords" content="roofing Mission TX, roofer Mission, roof repair Mission TX, roof replacement Mission, storm damage roof Mission TX, roofing Sharyland TX, remodeling contractor Mission TX" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/areas/mission.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta property="og:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections. Call (956) 460-3489." />
-  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <meta property="og:title" content="Roofing &amp; Remodeling in Mission, TX | Hidalgo Roofing" />
+  <meta property="og:description" content="Roofing, storm restoration and remodeling for Mission, TX. BBB A+ accredited, 24/7 answer, free roof inspections. Call (956) 460-3489." />
+  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/areas/mission.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch (LAUNCH BLOCKER) -->
   <meta property="og:image:width" content="1200" />
@@ -22,8 +22,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta name="twitter:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections." />
+  <meta name="twitter:title" content="Roofing &amp; Remodeling in Mission, TX | Hidalgo Roofing" />
+  <meta name="twitter:description" content="Roofing, storm restoration and remodeling for Mission, TX. BBB A+ accredited, 24/7 answer, free roof inspections." />
   <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -442,30 +442,17 @@
   </style>
 
   <!-- ============================================================
-       ABOUT-PAGE SCHEMA — 3 blocks:
-         1) AboutPage, pointing at the homepage business node.
-         2) LocalBusiness REF — same @id as the homepage business node, so
-            this is a reference, NOT a second declaration. Address, hours,
-            offer catalog and aggregateRating stay on the homepage only.
+       CITY-PAGE SCHEMA — 3 blocks:
+         1) LocalBusiness REF — same @id as the homepage business node, so this
+            is a reference to that entity, NOT a second declaration. Address,
+            hours and offer catalog stay on the homepage only.
+         2) FAQPage — 5 city-scoped Q&As (min 4), text derived from the
+            visible accordion so the two can never drift.
          3) BreadcrumbList.
-       No staff/employee, foundingDate or award property is emitted — those
-       are [NEEDS INPUT] in CLAUDE.md and must not be invented.
+       areaServed = Mission ONLY — never the full city list.
   ============================================================ -->
 
-  <!-- 1/3 — AboutPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://www.hidalgoroofingremodelingtx.com/about.html#aboutpage",
-    "url": "https://www.hidalgoroofingremodelingtx.com/about.html",
-    "name": "About Hidalgo Roofing & Remodeling",
-    "description": "A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, Texas, serving the Rio Grande Valley.",
-    "about": { "@id": "https://www.hidalgoroofingremodelingtx.com/#business" }
-  }
-  </script>
-
-  <!-- 2/3 — LocalBusiness reference -->
+  <!-- 1/3 — LocalBusiness reference -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -474,7 +461,65 @@
     "name": "Hidalgo Roofing & Remodeling LLC",
     "url": "https://www.hidalgoroofingremodelingtx.com/",
     "telephone": "+19564603489",
-    "email": "hidalgoroofing9@gmail.com"
+    "areaServed": {
+      "@type": "City",
+      "name": "Mission",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Texas"
+      }
+    }
+  }
+  </script>
+
+  <!-- 2/3 — FAQPage (5 city-scoped Q&As) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.hidalgoroofingremodelingtx.com/areas/mission.html#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you cover Sharyland, or only the city of Mission?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. We work the Shary Road corridor, the Pioneer side, and the older Sharyland streets the same as anywhere else in town. If the address says Mission, TX, we come out."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trees hang over my roof in Mission. Is that actually a problem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It can be. Limbs scrape granules off shingles, leaves and citrus debris pack into valleys and hold water there, and heavy shade keeps a roof from drying out between rains. We look hard at the valleys and the shaded slopes on Mission houses, because that is where the damage usually starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can you get to Mission after a hail storm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually the same day. We are in Pharr, so Mission is a straight run west on I-2. If water is coming into the house, say so on the call — same-day emergency tarping happens before anything else gets scheduled."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you charge for a roof inspection in Mission?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Inspections are free everywhere we work. We get up on the roof, photograph what we find, and go through the photos with you. If the roof has years left in it, that is what you will hear."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you build a room addition in Mission, not just roof work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Room additions are regular work for us — framing, wiring, plumbing and finish work — along with home remodeling across Mission. The roofing side just means the new roof ties into the old one properly."
+        }
+      }
+    ]
   }
   </script>
 
@@ -493,8 +538,14 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "About",
-        "item": "https://www.hidalgoroofingremodelingtx.com/about.html"
+        "name": "Areas We Serve",
+        "item": "https://www.hidalgoroofingremodelingtx.com/#service-area"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Mission",
+        "item": "https://www.hidalgoroofingremodelingtx.com/areas/mission.html"
       }
     ]
   }
@@ -547,13 +598,13 @@
           <div class="nav-dropdown-menu" aria-label="Areas We Serve">
             <a href="/areas/mcallen.html">McAllen</a>
             <a href="/areas/edinburg.html">Edinburg</a>
-            <a href="/areas/mission.html">Mission</a>
+            <a href="/areas/mission.html" aria-current="page">Mission</a>
             <a href="/areas/weslaco.html">Weslaco</a>
             <a href="/areas/san-juan.html">San Juan</a>
           </div>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150" aria-current="page">About</a>
+        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
         <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
         <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
@@ -597,12 +648,12 @@
         <div id="mobile-areas-submenu" class="mobile-services-submenu">
           <a href="/areas/mcallen.html">McAllen</a>
           <a href="/areas/edinburg.html">Edinburg</a>
-          <a href="/areas/mission.html">Mission</a>
+          <a href="/areas/mission.html" aria-current="page">Mission</a>
           <a href="/areas/weslaco.html">Weslaco</a>
           <a href="/areas/san-juan.html">San Juan</a>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium" aria-current="page">About</a>
+        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
         <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
@@ -611,10 +662,11 @@
       </div>
     </div>
   </nav>
+
   <!-- ============================================================
-       HERO (full-height, hero-background photo slot)
+       HERO
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="About Hidalgo Roofing and Remodeling">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Roofing and remodeling in Mission, Texas">
 
     <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
     <!-- Hero video: shared site-wide clip. brand_assets/hero-background.mp4 (H.264, no
@@ -649,22 +701,24 @@
         <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span class="sep" aria-hidden="true">/</span>
-          <span class="current">About</span>
+          <a href="/#service-area">Areas We Serve</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span class="current">Mission</span>
         </nav>
 
         <div class="mb-6">
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 52px; width: auto; max-height: 60px; display: block;" />
         </div>
 
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Roofing &amp; Remodeling &middot; Pharr, TX</p>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Serving Mission, TX &middot; Hidalgo County</p>
 
         <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          About<br />
-          <span style="color: var(--color-accent-bright);">Hidalgo Roofing.</span>
+          Roofing &amp; Remodeling<br />in Mission, TX —<br />
+          <span style="color: var(--color-accent-bright);">One Run West on 83.</span>
         </h1>
 
         <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          A residential roofing and remodeling contractor working out of Pharr and across the Rio Grande Valley. Someone answers the phone around the clock, and <strong style="color: var(--color-bg);">every roof starts with a free inspection</strong>.
+          Mission sits at the west end of the run we make every week, straight out I-2 from our Pharr office. Roof repairs, full replacements, hail damage, and remodeling — <strong style="color: var(--color-bg);">with a free inspection before any quote</strong>.
         </p>
 
         <div class="flex flex-wrap gap-4 mb-10">
@@ -705,170 +759,231 @@
   ============================================================ -->
   <main id="main-content">
 
-    <!-- SPLIT 1 (light): our story — text left, one photo right.
-         Owner is named ONCE here, first name only, in the dedicated
-         owner reference — never in a heading, meta, OG or CTA
-         (CLAUDE.md: never publish a last name for Richard). -->
-    <section id="our-story" class="section-dark atmo wash-navy-tr py-24" aria-label="The Hidalgo Roofing story">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Our Story</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Roofing and Remodeling, Run Out of Pharr
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Hidalgo Roofing &amp; Remodeling is a locally owned residential contractor based at 415 North Sugar Road in Pharr. There is no showroom to visit — it is an office, and the crews go to the house. Roofs first, then kitchens, baths and room additions.
-            </p>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              The company is run by Richard, who has spent 20+ years in the roofing trade. That is the reason the inspection comes before the quote here. Somebody who has been on that many roofs can get up on yours and tell you what is actually wrong with it, instead of pricing a guess from the driveway.
-            </p>
-            <p class="text-muted text-lg" style="line-height: 1.7;">
-              We have been a BBB Accredited Business with an A+ rating since 2016. Residential work is all we take — houses, not commercial buildings — and we would rather be the contractor a street keeps calling than the one that turns up after a hail storm and disappears.
-            </p>
-          </div>
-
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing crew finishing a residential shingle roof in Pharr, Texas" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
+    <!-- CITY-SWAP: intro -->
+    <section class="section-mid atmo wash-navy-tr py-20" aria-label="About our roofing work in Mission">
+      <div class="max-w-3xl mx-auto px-5 text-center fade-up">
+        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Roofing &amp; Remodeling &middot; Mission, TX</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
+          The Roofer Working Mission and Sharyland
+        </h2>
+        <p class="text-muted text-lg mb-4" style="line-height: 1.7;">
+          Mission is the west end of the run we make every week. From our office on North Sugar Road in Pharr it is I-2 west through McAllen and out to the Shary Road and Conway exits. Citrus built this town — John Shary bought the land and planted the groves here a little over a hundred years ago — and plenty of Mission neighborhoods still have the big trees to show for it.
+        </p>
+        <p class="text-muted text-lg" style="line-height: 1.7;">
+          Those trees are part of why we get called. Limbs drop on shingles, leaves and citrus debris pack into valleys, and heavy shade keeps a slope damp long after the rest of the roof dries. We handle <a href="/services/roof-repair.html" class="body-link">roof repair</a>, full <a href="/services/roof-replacement.html" class="body-link">roof replacement</a>, <a href="/services/storm-restoration.html" class="body-link">storm restoration</a>, and remodeling inside the house — free inspection first.
+        </p>
       </div>
     </section>
+    <!-- END CITY-SWAP: intro -->
 
-    <!-- SPLIT 2 (dark): rooted local — text + 2×2 checklist left, one photo right -->
-    <section id="rooted-local" class="dark-section py-24" aria-label="Based in Pharr, working across the Rio Grande Valley">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Rooted Local</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Based in Pharr, Working the Whole Valley
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Pharr is home. From there we work <a href="/areas/mcallen.html" class="body-link">McAllen</a>, <a href="/areas/edinburg.html" class="body-link">Edinburg</a>, <a href="/areas/mission.html" class="body-link">Mission</a>, <a href="/areas/weslaco.html" class="body-link">Weslaco</a> and <a href="/areas/san-juan.html" class="body-link">San Juan</a> regularly, plus Alamo, Palmview, Donna and Mercedes. Hidalgo County is a short drive end to end, which is what makes same-day response a real thing rather than a slogan.
-            </p>
-            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
-              Roofing is the main line of work — <a href="/services/roof-repair.html" class="body-link">repairs</a>, full <a href="/services/roof-replacement.html" class="body-link">replacements</a>, and <a href="/services/storm-restoration.html" class="body-link">storm restoration</a> after hail. The same company handles <a href="/services/home-remodeling.html" class="body-link">home remodeling</a> and <a href="/services/room-additions.html" class="body-link">room additions</a> once the roof is sorted out.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Free roof inspections, always
-              </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Someone answers 24 hours a day
-              </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Same-day emergency roof tarping
-              </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Help filing the insurance claim
-              </div>
-            </div>
-          </div>
-
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing inspecting storm damage on a Rio Grande Valley roof" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: values -->
-    <section id="values" class="section-mid atmo wash-ember-tl py-20" aria-label="The standards behind every Hidalgo Roofing job">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            What We Hold Every Job To
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Four things decide how a job goes here. They show up on the phone, on the roof, and in what the house looks like when we leave.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Look First, Quote Second</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Nobody prices a roof from the street. We get up there, photograph what is actually happening, and the number comes afterward — in writing.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Answer the Phone</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">24 hours a day, seven days a week. A roof that opens up at 2 a.m. is not a Monday problem, so we do not treat it like one.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Residential Only</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Houses are what we do. Staying in one lane means the crew has already seen your roof&rsquo;s problem, whatever era the house is from.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Still Here Next Year</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">BBB accredited with an A+ rating since 2016. The number on this site still works after the storm season ends and after the job is finished.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: why the Valley trusts us -->
-    <section id="why-us" class="section-dark atmo wash-navy-br py-20" aria-label="Why the Rio Grande Valley trusts Hidalgo Roofing">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Why the Valley Calls Us
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Trust gets earned job by job, across Pharr, McAllen, Edinburg, Mission, Weslaco and San Juan. Here is what keeps the phone ringing.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">BBB A+ Accredited</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">An accredited business with an A+ rating since 2016 — a record you can look up rather than take our word for.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Storm Work Done Right</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Hail and wind damage, <a href="/services/storm-restoration.html" class="body-link">same-day emergency tarping</a>, and damage documented the way an adjuster needs to see it.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Insurance Claim Help</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">We photograph the damage properly and help you file. What the policy pays is between you and your carrier — the paperwork is not something you handle alone.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Roofing and Remodeling</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">One contractor for the roof and for the <a href="/services/home-remodeling.html" class="body-link">kitchen, bath, flooring or room addition</a> underneath it.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <div class="divider"></div>
 
     <!-- ============================================================
-         SECTION: final-cta — shared partial pattern, page-scoped headline
+         COVERAGE SPLIT — text + local-anchor checklist / one photo
     ============================================================ -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection">
+    <section class="section-dark atmo wash-navy-tr py-24" aria-label="Where we work in Mission">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="fade-up lg:order-1">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Our Coverage</p>
+            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
+              Where We Work in Mission
+            </h2>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              We cover Mission from the Sharyland side across to Conway and Bentsen Palm, plus the older streets near the historic downtown and everything running along the expressway.
+            </p>
+            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
+              The split here is grove-era neighborhoods against the newer Sharyland building. Older Mission roofs usually come with limb damage, packed valleys, and flashing that has been patched more than once. The newer ones are mostly hail and workmanship. Two different problems, two different fixes.
+            </p>
+
+            <!-- CITY-SWAP: local-anchors -->
+            <!-- Every anchor below was web-verified for this build (Sharyland and Shary Rd; Bentsen Palm Dr; Conway Ave; I-2/US-83 through Mission; Bentsen-Rio Grande Valley State Park, the World Birding Center headquarters). Named streets and public landmarks only — no residential subdivision is named by design. -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Sharyland and the Shary Road corridor
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                The Bentsen Palm Drive side of town
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Streets running off Conway Avenue
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Historic downtown Mission
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Anywhere along I-2 and Expressway 83
+              </div>
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Out toward Bentsen-Rio Grande Valley State Park
+              </div>
+            </div>
+            <!-- END CITY-SWAP: local-anchors -->
+          </div>
+
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
+            <div class="photo-frame">
+              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
+              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing crew replacing a residential shingle roof in Mission, Texas" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CITY-SWAP: why-city -->
+    <!-- DARK section, 2-column checklist, no photo, no icons (per TEMPLATE-SPEC) -->
+    <section class="dark-section py-24" aria-label="Why Mission homeowners choose Hidalgo Roofing">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Why Mission Calls Us</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            Why Mission Homeowners Keep Our Number
+          </h2>
+          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
+            Every hail season brings crews into Mission who were not here the month before. Here is the case for the contractor with a real address down the expressway.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-7 fade-up" style="transition-delay: 0.06s;">
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">The Drive Is Short</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">Our office is on North Sugar Road in Pharr, straight out I-2. Mission is a run down the expressway, not a job we squeeze in when we happen to be out west.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">We Check What Trees Do</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">Mission's older neighborhoods are full of grove-era shade. Limb strikes, packed valleys, and slopes that stay damp are things we look for here that would not matter on a bare lot.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Local, Not Passing Through</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">BBB accredited with an A+ rating since 2016. Our address is a real one in Pharr, not a truck with out-of-state plates parked off 83 for the season.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">The Phone Gets Answered</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">24 hours a day, seven days a week. Storm damage in Sharyland at midnight still reaches a person, not a machine.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Free Inspection, Written Quote</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">We get on the roof, photograph it, and put the number in writing afterward. Nobody prices a Mission roof from the curb.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <svg class="mt-1 flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.75" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg mb-1.5">Roofing and Remodeling Together</h3>
+              <p class="text-muted text-sm" style="line-height: 1.7;">20+ years in the roofing trade, plus kitchens, baths, flooring and room additions. One contractor for the roof and for what sits under it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CITY-SWAP: why-city -->
+
+    <div class="divider"></div>
+
+    <!-- CITY-SWAP: faq -->
+    <section id="faq" class="section-dark atmo wash-ember-tl py-20" aria-label="Mission roofing questions">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Good to Know</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            Mission Questions
+          </h2>
+        </div>
+
+        <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);" open>
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you cover Sharyland, or only the city of Mission?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Both. We work the Shary Road corridor, the Pioneer side, and the older Sharyland streets the same as anywhere else in town. If the address says Mission, TX, we come out.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Trees hang over my roof in Mission. Is that actually a problem?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">It can be. Limbs scrape granules off shingles, leaves and citrus debris pack into valleys and hold water there, and heavy shade keeps a roof from drying out between rains. We look hard at the valleys and the shaded slopes on Mission houses, because that is where the damage usually starts.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How fast can you get to Mission after a hail storm?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Usually the same day. We are in Pharr, so Mission is a straight run west on I-2. If water is coming into the house, say so on the call — same-day emergency tarping happens before anything else gets scheduled.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you charge for a roof inspection in Mission?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">No. Inspections are free everywhere we work. We get up on the roof, photograph what we find, and go through the photos with you. If the roof has years left in it, that is what you will hear.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Can you build a room addition in Mission, not just roof work?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes. <a href="/services/room-additions.html" class="body-link">Room additions</a> are regular work for us — framing, wiring, plumbing and finish work — along with <a href="/services/home-remodeling.html" class="body-link">home remodeling</a> across Mission. The roofing side just means the new roof ties into the old one properly.</div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+    <!-- END CITY-SWAP: faq -->
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: final-cta — shared partial pattern, city-scoped headline
+    ============================================================ -->
+    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection in Mission">
       <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
       <!-- PLACEHOLDER: brand_assets/cta-background.jpg does not exist yet (LAUNCH BLOCKER) -->
       <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080') center center / cover no-repeat;"></div>
@@ -883,7 +998,7 @@
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
         <h2 class="font-display text-4xl lg:text-5xl font-extrabold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Want the Roof<br />Looked At?<br /><span style="color: var(--color-accent-bright);">Start Free.</span>
+          Need a Roofer<br />in Mission?<br /><span style="color: var(--color-accent-bright);">We Are Out Your Way.</span>
         </h2>
         <p class="text-muted text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
           Book a free roof inspection and we will get up there, photograph what we find, and hand you a written quote. Leaking right now? Call — we answer 24/7 and can tarp it today.
@@ -974,7 +1089,7 @@
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">About Us</a></li>
+            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
             <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>
@@ -989,7 +1104,7 @@
             <li><a href="/#service-area"        class="text-muted text-sm hover:text-white transition-colors duration-150">Pharr</a></li>
             <li><a href="/areas/mcallen.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">McAllen</a></li>
             <li><a href="/areas/edinburg.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">Edinburg</a></li>
-            <li><a href="/areas/mission.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Mission</a></li>
+            <li><a href="/areas/mission.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">Mission</a></li>
             <li><a href="/areas/weslaco.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Weslaco</a></li>
             <li><a href="/areas/san-juan.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">San Juan</a></li>
           </ul>

@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX</title>
-  <meta name="description" content="BBB A+ accredited residential roofing &amp; remodeling in Pharr, TX. 24/7 answer, same-day emergency tarping, free roof inspections across the Rio Grande Valley." />
-  <meta name="keywords" content="about Hidalgo Roofing, roofing company Pharr TX, roofing contractor Pharr, BBB accredited roofer Rio Grande Valley, residential roofer Hidalgo County, remodeling contractor Pharr TX" />
+  <!-- TITLE COLLISION RULE: leads on "Storm Restoration" — distinct from the homepage
+       ("Roofing & Remodeling in Pharr, TX") and from every sibling service page. -->
+  <title>Storm Restoration in Pharr, TX | Hidalgo Roofing</title>
+  <meta name="description" content="Storm damage roof repair in Pharr, TX and the Rio Grande Valley. Same-day emergency tarping, hail and wind damage, insurance claim help. Call 24/7." />
+  <meta name="keywords" content="storm damage roof repair Pharr TX, hail damage roof Rio Grande Valley, emergency roof tarping Pharr, wind damage roof repair McAllen TX, roof insurance claim help Pharr, storm restoration Hidalgo County" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/services/storm-restoration.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta property="og:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections. Call (956) 460-3489." />
-  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/about.html" />
+  <meta property="og:title" content="Storm Restoration in Pharr, TX | Hidalgo Roofing" />
+  <meta property="og:description" content="Hail and wind damage roofing across Pharr and the Rio Grande Valley. Same-day emergency tarping and help filing your insurance claim. Call (956) 460-3489." />
+  <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/services/storm-restoration.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch (LAUNCH BLOCKER) -->
   <meta property="og:image:width" content="1200" />
@@ -22,8 +24,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Hidalgo Roofing | Roofing &amp; Remodeling in Pharr, TX" />
-  <meta name="twitter:description" content="A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, TX. 24/7 answer, free roof inspections." />
+  <meta name="twitter:title" content="Storm Restoration in Pharr, TX | Hidalgo Roofing" />
+  <meta name="twitter:description" content="Hail and wind damage roofing across Pharr and the Rio Grande Valley. Same-day emergency tarping and help filing your insurance claim." />
   <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -442,39 +444,227 @@
   </style>
 
   <!-- ============================================================
-       ABOUT-PAGE SCHEMA — 3 blocks:
-         1) AboutPage, pointing at the homepage business node.
-         2) LocalBusiness REF — same @id as the homepage business node, so
-            this is a reference, NOT a second declaration. Address, hours,
-            offer catalog and aggregateRating stay on the homepage only.
-         3) BreadcrumbList.
-       No staff/employee, foundingDate or award property is emitted — those
-       are [NEEDS INPUT] in CLAUDE.md and must not be invented.
+       SERVICE-PAGE SCHEMA — 3 blocks: Service + FAQPage + BreadcrumbList
+       provider references the homepage business node by @id (never a
+       re-declaration of the LocalBusiness).
+       NO price / priceRange / Offer price anywhere — [NEEDS INPUT] and the
+       Hard Rule routes all pricing intent to the free-inspection CTA.
   ============================================================ -->
 
-  <!-- 1/3 — AboutPage -->
+  <!-- 1/3 — Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "@id": "https://www.hidalgoroofingremodelingtx.com/about.html#aboutpage",
-    "url": "https://www.hidalgoroofingremodelingtx.com/about.html",
-    "name": "About Hidalgo Roofing & Remodeling",
-    "description": "A BBB A+ accredited residential roofing and remodeling contractor based in Pharr, Texas, serving the Rio Grande Valley.",
-    "about": { "@id": "https://www.hidalgoroofingremodelingtx.com/#business" }
+    "@type": "Service",
+    "@id": "https://www.hidalgoroofingremodelingtx.com/services/storm-restoration.html#service",
+    "serviceType": "Storm Damage Restoration",
+    "name": "Storm Damage Restoration",
+    "description": "Storm damage roof restoration in Pharr, Texas and the Rio Grande Valley. Same-day emergency roof tarping, hail and wind damage repair, storm damage documentation, insurance claim assistance, and gutter, fascia and siding repair. BBB Accredited Business with an A+ rating, answering 24/7.",
+    "url": "https://www.hidalgoroofingremodelingtx.com/services/storm-restoration.html",
+    "provider": {
+      "@type": "RoofingContractor",
+      "@id": "https://www.hidalgoroofingremodelingtx.com/#business",
+      "name": "Hidalgo Roofing & Remodeling LLC",
+      "telephone": "+19564603489",
+      "url": "https://www.hidalgoroofingremodelingtx.com/"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Pharr",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "McAllen",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Edinburg",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Mission",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Weslaco",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "San Juan",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Alamo",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Palmview",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Donna",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Mercedes",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Texas"
+        }
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Storm Restoration Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emergency Roof Tarping"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Hail Damage Roof Repair"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Wind Damage Roof Repair"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Storm Damage Documentation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Insurance Claim Assistance"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Gutter, Fascia and Siding Repair"
+          }
+        }
+      ]
+    }
   }
   </script>
 
-  <!-- 2/3 — LocalBusiness reference -->
+  <!-- 2/3 — FAQPage (7 Q&As; mirrors the visible accordion word-for-word) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "RoofingContractor",
-    "@id": "https://www.hidalgoroofingremodelingtx.com/#business",
-    "name": "Hidalgo Roofing & Remodeling LLC",
-    "url": "https://www.hidalgoroofingremodelingtx.com/",
-    "telephone": "+19564603489",
-    "email": "hidalgoroofing9@gmail.com"
+    "@type": "FAQPage",
+    "@id": "https://www.hidalgoroofingremodelingtx.com/services/storm-restoration.html#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "My roof is leaking right now — how fast can you get here?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually same day. Someone answers the phone 24 hours a day, seven days a week. Say on the call that water is coming in and we will treat it as an emergency — the goal is a tarp over the opening before the next round of rain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does hail damage actually look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On shingles it looks like dark bruises where the granules got knocked off, often the size of a coin. On metal — vents, gutters, flashing — it shows as small dents. You can sometimes spot the dents from the ground, but the shingle bruising is hard to judge without getting up there, which is what the free inspection is for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you help with the insurance claim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We do. We document the damage with photos and measurements, help you file, and put together what your carrier asks for. What your policy covers is between you and your insurance company — we do not promise coverage outcomes. We just make sure the damage is on record properly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will you meet my insurance adjuster at the house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if you want us there. It helps when the person writing the estimate and the roofer who has been on your roof are looking at the same damage at the same time. Tell us when the adjuster is scheduled and we will work around it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does storm damage repair cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on what the storm did and how much of the roof it touched, so we do not put a number on this page. The inspection is free, and you will get a written quote before anyone starts work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you fix siding and gutters, or only the roof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. Hail and wind usually take the gutters and fascia along with the shingles, and siding on the windward wall often gets hit too. We handle those as part of the same job. Bigger exterior work rolls into home remodeling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I wait until the claim is approved to call a roofer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — call early. Damage is easiest to document before more weather moves through and before anything gets patched over. Getting a tarp on quickly also keeps a small problem from turning into a ceiling replacement."
+        }
+      }
+    ]
   }
   </script>
 
@@ -493,8 +683,14 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "About",
-        "item": "https://www.hidalgoroofingremodelingtx.com/about.html"
+        "name": "Services",
+        "item": "https://www.hidalgoroofingremodelingtx.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Storm Restoration",
+        "item": "https://www.hidalgoroofingremodelingtx.com/services/storm-restoration.html"
       }
     ]
   }
@@ -530,7 +726,7 @@
           </a>
           <div class="nav-dropdown-menu" aria-label="Services">
             <a href="/services/roofing.html">Roofing</a>
-            <a href="/services/storm-restoration.html">Storm Restoration</a>
+            <a href="/services/storm-restoration.html" aria-current="page">Storm Restoration</a>
             <a href="/services/roof-repair.html">Roof Repair</a>
             <a href="/services/roof-replacement.html">Roof Replacement</a>
             <a href="/services/home-remodeling.html">Home Remodeling</a>
@@ -553,7 +749,7 @@
           </div>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150" aria-current="page">About</a>
+        <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
         <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
         <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
@@ -582,7 +778,7 @@
         </button>
         <div id="mobile-services-submenu" class="mobile-services-submenu">
           <a href="/services/roofing.html">Roofing</a>
-          <a href="/services/storm-restoration.html">Storm Restoration</a>
+          <a href="/services/storm-restoration.html" aria-current="page">Storm Restoration</a>
           <a href="/services/roof-repair.html">Roof Repair</a>
           <a href="/services/roof-replacement.html">Roof Replacement</a>
           <a href="/services/home-remodeling.html">Home Remodeling</a>
@@ -602,7 +798,7 @@
           <a href="/areas/san-juan.html">San Juan</a>
         </div>
         <!-- END SHARED ZONE: Areas We Serve dropdown -->
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium" aria-current="page">About</a>
+        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
         <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
@@ -611,10 +807,11 @@
       </div>
     </div>
   </nav>
+
   <!-- ============================================================
-       HERO (full-height, hero-background photo slot)
+       HERO
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="About Hidalgo Roofing and Remodeling">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Storm restoration and hail damage roofing in Pharr, Texas">
 
     <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
     <!-- Hero video: shared site-wide clip. brand_assets/hero-background.mp4 (H.264, no
@@ -635,38 +832,49 @@
       <source src="/brand_assets/hero-background.mp4" type="video/mp4" />
     </video>
 
+    <!-- Dark overlay — heavier on the LEFT so the text block keeps its dark bed
+         no matter how bright the real hero-background.jpg turns out to be. -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
       linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.80) 0%, rgba(var(--color-dark-rgb), 0.42) 25%, rgba(var(--color-dark-rgb), 0.38) 65%, rgba(var(--color-dark-rgb), 0.84) 100%),
       linear-gradient(90deg, rgba(var(--color-dark-rgb), 0.86) 0%, rgba(var(--color-dark-rgb), 0.62) 38%, transparent 72%),
       radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.88) 0%, transparent 68%);
     "></div>
 
+    <!-- Edge vignette -->
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
     <div class="hero-outer relative z-10 max-w-5xl mx-auto px-5 w-full">
       <div class="hero-text-block max-w-2xl fade-up">
 
+        <!-- Breadcrumb (mirrors the BreadcrumbList JSON-LD above) -->
         <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span class="sep" aria-hidden="true">/</span>
-          <span class="current">About</span>
+          <a href="/#services">Services</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span class="current">Storm Restoration</span>
         </nav>
 
+        <!-- BBB A+ emphasis — client-requested trust signal.
+             [NEEDS INPUT] the real BBB accreditation mark is not in brand_assets/ —
+             text badge only until it lands. Do NOT fabricate a BBB logo. -->
         <div class="mb-6">
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 52px; width: auto; max-height: 60px; display: block;" />
         </div>
 
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Roofing &amp; Remodeling &middot; Pharr, TX</p>
+        <!-- Eyebrow -->
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Storm Restoration &middot; Pharr, TX &amp; the Rio Grande Valley</p>
 
         <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          About<br />
-          <span style="color: var(--color-accent-bright);">Hidalgo Roofing.</span>
+          Storm Restoration<br />in Pharr, TX —<br />
+          <span style="color: var(--color-accent-bright);">Ready for Any Storm.</span>
         </h1>
 
         <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          A residential roofing and remodeling contractor working out of Pharr and across the Rio Grande Valley. Someone answers the phone around the clock, and <strong style="color: var(--color-bg);">every roof starts with a free inspection</strong>.
+          Hail in the spring, wind off the Gulf, and a roof that was fine yesterday. We answer the phone at any hour, get a tarp on before the next band of rain, and <strong style="color: var(--color-bg);">help you file the insurance claim</strong> once the water is stopped.
         </p>
 
+        <!-- CTAs — primary intake routes to the GHL form at /#contact. -->
         <div class="flex flex-wrap gap-4 mb-10">
           <a href="tel:+19564603489" class="btn-primary text-base px-7 py-4">
             Call Now — (956) 460-3489
@@ -677,10 +885,11 @@
           </a>
         </div>
 
+        <!-- Stats row -->
         <div class="hero-stats flex flex-wrap gap-8">
           <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
-            <div class="text-muted text-sm mt-0.5">Roof Inspections</div>
+            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Same-Day</div>
+            <div class="text-muted text-sm mt-0.5">Emergency Tarping</div>
           </div>
           <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
           <div>
@@ -689,14 +898,15 @@
           </div>
           <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
           <div>
-            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">A+</div>
-            <div class="text-muted text-sm mt-0.5">BBB Accredited</div>
+            <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
+            <div class="text-muted text-sm mt-0.5">Damage Inspections</div>
           </div>
         </div>
 
       </div>
     </div>
 
+    <!-- Gold accent bridge -->
     <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-primary) 18%, var(--color-primary) 82%, transparent 100%); opacity: 0.92;"></div>
   </section>
 
@@ -705,160 +915,70 @@
   ============================================================ -->
   <main id="main-content">
 
-    <!-- SPLIT 1 (light): our story — text left, one photo right.
-         Owner is named ONCE here, first name only, in the dedicated
-         owner reference — never in a heading, meta, OG or CTA
-         (CLAUDE.md: never publish a last name for Richard). -->
-    <section id="our-story" class="section-dark atmo wash-navy-tr py-24" aria-label="The Hidalgo Roofing story">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Our Story</p>
-            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Roofing and Remodeling, Run Out of Pharr
-            </h2>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Hidalgo Roofing &amp; Remodeling is a locally owned residential contractor based at 415 North Sugar Road in Pharr. There is no showroom to visit — it is an office, and the crews go to the house. Roofs first, then kitchens, baths and room additions.
-            </p>
-            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              The company is run by Richard, who has spent 20+ years in the roofing trade. That is the reason the inspection comes before the quote here. Somebody who has been on that many roofs can get up on yours and tell you what is actually wrong with it, instead of pricing a guess from the driveway.
-            </p>
-            <p class="text-muted text-lg" style="line-height: 1.7;">
-              We have been a BBB Accredited Business with an A+ rating since 2016. Residential work is all we take — houses, not commercial buildings — and we would rather be the contractor a street keeps calling than the one that turns up after a hail storm and disappears.
-            </p>
-          </div>
-
-          <div class="fade-up lg:order-2">
-            <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing crew finishing a residential shingle roof in Pharr, Texas" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
+    <!-- ============================================================
+         SECTION: intro — single column, no photo
+    ============================================================ -->
+    <section class="section-mid atmo wash-navy-tr py-20" aria-label="About storm damage restoration in Pharr and the Rio Grande Valley">
+      <div class="max-w-3xl mx-auto px-5 text-center fade-up">
+        <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Storm Restoration &middot; Pharr, TX</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
+          When a Storm Comes Through the Valley
+        </h2>
+        <p class="text-muted text-lg mb-4" style="line-height: 1.7;">
+          Storms here have a pattern. Spring brings hail, summer brings wind and rain off the Gulf, and both leave the same trail behind — shingles in the yard, dented gutters, and a wet spot on the ceiling that was not there last week.
+        </p>
+        <p class="text-muted text-lg" style="line-height: 1.7;">
+          Hidalgo Roofing works storm damage across Pharr, McAllen, Edinburg, Mission, Weslaco, and San Juan. We handle the emergency part first and the paperwork second. If your roof is just worn out rather than storm-hit, the <a href="/services/roofing.html" class="body-link">roofing</a> page is the better place to start.
+        </p>
       </div>
     </section>
 
-    <!-- SPLIT 2 (dark): rooted local — text + 2×2 checklist left, one photo right -->
-    <section id="rooted-local" class="dark-section py-24" aria-label="Based in Pharr, working across the Rio Grande Valley">
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SPLIT 1 of 3 — light, photo RIGHT
+    ============================================================ -->
+    <section class="section-dark atmo wash-navy-tr py-24" aria-label="Same-day emergency roof tarping in Pharr and the Rio Grande Valley">
       <div class="max-w-6xl mx-auto px-5">
         <div class="grid lg:grid-cols-2 gap-14 items-center">
 
-          <div class="fade-up lg:order-1" style="transition-delay: 0.1s;">
-            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Rooted Local</p>
+          <div class="fade-up lg:order-1">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">First Response</p>
             <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
-              Based in Pharr, Working the Whole Valley
+              Emergency Tarping, Same Day
             </h2>
             <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
-              Pharr is home. From there we work <a href="/areas/mcallen.html" class="body-link">McAllen</a>, <a href="/areas/edinburg.html" class="body-link">Edinburg</a>, <a href="/areas/mission.html" class="body-link">Mission</a>, <a href="/areas/weslaco.html" class="body-link">Weslaco</a> and <a href="/areas/san-juan.html" class="body-link">San Juan</a> regularly, plus Alamo, Palmview, Donna and Mercedes. Hidalgo County is a short drive end to end, which is what makes same-day response a real thing rather than a slogan.
+              A hole in the roof gets worse every hour it rains. Water runs down the decking, soaks the insulation, and comes through the drywall a room away from where it started. The first job is stopping that.
             </p>
             <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
-              Roofing is the main line of work — <a href="/services/roof-repair.html" class="body-link">repairs</a>, full <a href="/services/roof-replacement.html" class="body-link">replacements</a>, and <a href="/services/storm-restoration.html" class="body-link">storm restoration</a> after hail. The same company handles <a href="/services/home-remodeling.html" class="body-link">home remodeling</a> and <a href="/services/room-additions.html" class="body-link">room additions</a> once the roof is sorted out.
+              Call and tell us water is coming in. We come out, get a tarp over the opening, and fasten it down so it holds through the next round of weather. That buys us the time to look at the whole roof properly and do the real repair in daylight.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Free roof inspections, always
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Water coming through the ceiling
               </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Someone answers 24 hours a day
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Shingles blown into the yard
               </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Same-day emergency roof tarping
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                A tree limb through the roof
               </div>
-              <div class="flex items-start gap-2.5 text-sm text-muted" style="line-height: 1.6;">
-                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Help filing the insurance claim
+              <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
+                <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Tarps that let go in the wind
               </div>
             </div>
           </div>
 
-          <div class="fade-up lg:order-2">
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
             <div class="photo-frame">
               <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
-              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing inspecting storm damage on a Rio Grande Valley roof" loading="lazy" />
+              <img src="https://placehold.co/1200x900" alt="Emergency tarp secured over storm-damaged shingles on a home in McAllen, Texas" loading="lazy" />
             </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: values -->
-    <section id="values" class="section-mid atmo wash-ember-tl py-20" aria-label="The standards behind every Hidalgo Roofing job">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            What We Hold Every Job To
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Four things decide how a job goes here. They show up on the phone, on the roof, and in what the house looks like when we leave.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Look First, Quote Second</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Nobody prices a roof from the street. We get up there, photograph what is actually happening, and the number comes afterward — in writing.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Answer the Phone</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">24 hours a day, seven days a week. A roof that opens up at 2 a.m. is not a Monday problem, so we do not treat it like one.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Residential Only</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Houses are what we do. Staying in one lane means the crew has already seen your roof&rsquo;s problem, whatever era the house is from.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Still Here Next Year</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">BBB accredited with an A+ rating since 2016. The number on this site still works after the storm season ends and after the job is finished.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: why the Valley trusts us -->
-    <section id="why-us" class="section-dark atmo wash-navy-br py-20" aria-label="Why the Rio Grande Valley trusts Hidalgo Roofing">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-bold text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Why the Valley Calls Us
-          </h2>
-          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Trust gets earned job by job, across Pharr, McAllen, Edinburg, Mission, Weslaco and San Juan. Here is what keeps the phone ringing.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">BBB A+ Accredited</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">An accredited business with an A+ rating since 2016 — a record you can look up rather than take our word for.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Storm Work Done Right</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">Hail and wind damage, <a href="/services/storm-restoration.html" class="body-link">same-day emergency tarping</a>, and damage documented the way an adjuster needs to see it.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Insurance Claim Help</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">We photograph the damage properly and help you file. What the policy pays is between you and your carrier — the paperwork is not something you handle alone.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <h3 class="font-display font-bold text-base text-white mb-2">Roofing and Remodeling</h3>
-            <p class="text-muted text-sm" style="line-height: 1.6;">One contractor for the roof and for the <a href="/services/home-remodeling.html" class="body-link">kitchen, bath, flooring or room addition</a> underneath it.</p>
           </div>
 
         </div>
@@ -866,9 +986,251 @@
     </section>
 
     <!-- ============================================================
-         SECTION: final-cta — shared partial pattern, page-scoped headline
+         SPLIT 2 of 3 — DARK, photo LEFT
     ============================================================ -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection">
+    <section class="dark-section py-24" aria-label="Documenting hail and wind damage on Rio Grande Valley roofs">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="fade-up lg:order-1">
+            <div class="photo-frame">
+              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
+              <img src="https://placehold.co/1200x900" alt="Close-up of hail bruising and granule loss on a storm-damaged shingle roof in Edinburg, Texas" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-bright); margin-bottom: 14px;">Damage Documentation</p>
+            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
+              Hail and Wind Damage, Written Down Properly
+            </h2>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              Hail damage does not always look like damage from the driveway. It shows up as bruises in the shingle where the granules got knocked loose, dents in the soft metal on vents and gutters, and spatter marks on the flashing. Wind leaves a different signature — shingles creased at the fold, or lifted where the seal let go.
+            </p>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              We get on the roof, photograph every one of those, and mark where they are. Then we measure the roof so the numbers on the claim match the house.
+            </p>
+            <p class="text-muted text-lg" style="line-height: 1.7;">
+              That record matters. A claim built on clear photos and real measurements is a claim your carrier can actually act on.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SPLIT 3 of 3 — light, photo RIGHT
+    ============================================================ -->
+    <section class="section-dark atmo wash-ember-tr py-24" aria-label="Insurance claim help for storm damaged roofs in Pharr">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="fade-up lg:order-1">
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Insurance Claims</p>
+            <h2 class="font-display text-4xl lg:text-[2.5rem] font-bold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.12;">
+              Help With Your Insurance Claim
+            </h2>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              Most people file a roof claim once or twice in their life, so nobody expects you to know the steps. We will help you file it, hand over the photos and measurements, and put together whatever else your carrier asks for.
+            </p>
+            <p class="text-muted text-lg mb-5" style="line-height: 1.7;">
+              If your adjuster wants to walk the roof, we will be there for it, so the person writing the estimate and the person who has been on your roof are looking at the same damage.
+            </p>
+            <p class="text-muted text-lg mb-7" style="line-height: 1.7;">
+              What your policy covers is between you and your insurance company — we do not make promises about that. What we can do is make sure the damage is documented properly and that you are not sorting through the paperwork alone.
+            </p>
+            <a href="#included" class="link-arrow">
+              See what every storm job includes
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+          <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
+            <div class="photo-frame">
+              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
+              <img src="https://placehold.co/1200x900" alt="Hidalgo Roofing reviewing storm damage photos with a homeowner in Pharr, Texas" loading="lazy" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: whats-included — 6 icon-free centered cards
+    ============================================================ -->
+    <section id="included" class="section-mid atmo wash-ember-tl py-24" aria-label="What's included with every storm restoration job">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            What Every Storm Job Includes
+          </h2>
+          <p class="text-muted text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
+            Same process after every storm, whether you are in Pharr, McAllen, Edinburg, Mission, Weslaco, or San Juan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up" style="transition-delay: 0.06s;">
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Someone Answers, Any Hour</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">Storms do not keep business hours. We pick up at 2 a.m. the same as 2 p.m., and we will tell you honestly how fast we can be there.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Same-Day Tarping</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">If water is coming in, a tarp goes on first. Stopping the water is worth more than any conversation about the full repair.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Full Photo Record</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">Every bruise, crease, and dent gets photographed and located on the roof, along with measurements of the whole thing.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">Help Filing the Claim</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">We will walk you through filing and hand over the documentation your carrier asks for. No promises about coverage — that part is theirs.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">We Meet Your Adjuster</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">When the adjuster comes out, we will be on the roof with them so the estimate reflects what is actually up there.</p>
+          </div>
+
+          <div class="feature-card text-center">
+            <h3 class="font-display font-bold text-white text-lg mb-2">More Than the Roof</h3>
+            <p class="text-muted text-sm" style="line-height: 1.7;">Storms take gutters, fascia, and siding with them. We repair those too, so you are not chasing three different contractors.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: faq — 7 Q&As, mirrors the FAQPage JSON-LD exactly
+    ============================================================ -->
+    <section id="faq" class="section-dark atmo wash-ember-tl py-20" aria-label="Storm damage roofing questions from Rio Grande Valley homeowners">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="text-center mb-12 fade-up">
+          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 14px;">Good to Know</p>
+          <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-4" style="letter-spacing: -0.03em;">
+            Storm Damage Questions
+          </h2>
+        </div>
+
+        <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);" open>
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              My roof is leaking right now — how fast can you get here?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Usually same day. Someone answers the phone 24 hours a day, seven days a week. Say on the call that water is coming in and we will treat it as an emergency — the goal is a tarp over the opening before the next round of rain.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              What does hail damage actually look like?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">On shingles it looks like dark bruises where the granules got knocked off, often the size of a coin. On metal — vents, gutters, flashing — it shows as small dents. You can sometimes spot the dents from the ground, but the shingle bruising is hard to judge without getting up there, which is what the free inspection is for.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you help with the insurance claim?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">We do. We document the damage with photos and measurements, help you file, and put together what your carrier asks for. What your policy covers is between you and your insurance company — we do not promise coverage outcomes. We just make sure the damage is on record properly.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Will you meet my insurance adjuster at the house?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Yes, if you want us there. It helps when the person writing the estimate and the roofer who has been on your roof are looking at the same damage at the same time. Tell us when the adjuster is scheduled and we will work around it.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              How much does storm damage repair cost?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">It depends on what the storm did and how much of the roof it touched, so we do not put a number on this page. The inspection is free, and you will get a written quote before anyone starts work.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Do you fix siding and gutters, or only the roof?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">Both. Hail and wind usually take the gutters and fascia along with the shingles, and siding on the windward wall often gets hit too. We handle those as part of the same job. Bigger exterior work rolls into <a href="/services/home-remodeling.html" class="body-link">home remodeling</a>.</div>
+            </div>
+          </details>
+
+          <details class="rounded-2xl border overflow-hidden" style="border-color: rgba(var(--color-dark-rgb), 0.09); background: var(--color-bg);">
+            <summary class="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none font-display font-bold text-lg" style="color: var(--color-ink);">
+              Should I wait until the claim is approved to call a roofer?
+              <svg class="faq-chevron flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="px-7 pb-6 text-sm" style="color: var(--color-muted); line-height: 1.75; border-top: 1px solid rgba(var(--color-dark-rgb), 0.06);">
+              <div class="pt-4">No — call early. Damage is easiest to document before more weather moves through and before anything gets patched over. Getting a tarp on quickly also keeps a small problem from turning into a ceiling replacement.</div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: related-services — compact in-body cross-links
+    ============================================================ -->
+    <section class="section-mid atmo wash-navy-tr py-12" aria-label="Other services at Hidalgo Roofing and Remodeling">
+      <div class="max-w-4xl mx-auto px-5 text-center fade-up">
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 12px;">Explore More Services</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm">
+          <a href="/services/roofing.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Roofing</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/roof-repair.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Roof Repair</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/roof-replacement.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Roof Replacement</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/home-remodeling.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Home Remodeling</a>
+          <span aria-hidden="true" style="color: var(--color-line);">&middot;</span>
+          <a href="/services/room-additions.html" class="font-semibold hover:underline" style="color: var(--color-ink);">Room Additions</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         SECTION: final-cta — shared partial pattern, identical markup to the
+         flagship. Intake is the REAL one from CLAUDE.md (free inspection /
+         book an appointment -> GHL form at /#contact). Never "Get a Free Quote".
+    ============================================================ -->
+    <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free storm damage inspection">
       <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
       <!-- PLACEHOLDER: brand_assets/cta-background.jpg does not exist yet (LAUNCH BLOCKER) -->
       <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080') center center / cover no-repeat;"></div>
@@ -883,10 +1245,10 @@
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
         <h2 class="font-display text-4xl lg:text-5xl font-extrabold text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Want the Roof<br />Looked At?<br /><span style="color: var(--color-accent-bright);">Start Free.</span>
+          Storm Damage?<br />Leaking Right Now?<br /><span style="color: var(--color-accent-bright);">We Answer 24/7.</span>
         </h2>
         <p class="text-muted text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
-          Book a free roof inspection and we will get up there, photograph what we find, and hand you a written quote. Leaking right now? Call — we answer 24/7 and can tarp it today.
+          Call and we will get a tarp on today if that is what it takes, photograph the damage properly, and help you file the claim. The inspection costs nothing.
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
           <a href="tel:+19564603489" class="btn-primary text-base px-8 py-4">
@@ -900,7 +1262,7 @@
         <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 mt-10">
           <span class="flex items-center gap-1.5 text-muted text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Free roof inspections
+            Free damage inspections
           </span>
           <span class="flex items-center gap-1.5 text-muted text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-bright)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -962,7 +1324,7 @@
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Services</h2>
           <ul class="space-y-2.5">
             <li><a href="/services/roofing.html"            class="text-muted text-sm hover:text-white transition-colors duration-150">Roofing</a></li>
-            <li><a href="/services/storm-restoration.html"  class="text-muted text-sm hover:text-white transition-colors duration-150">Storm Restoration</a></li>
+            <li><a href="/services/storm-restoration.html"  class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">Storm Restoration</a></li>
             <li><a href="/services/roof-repair.html"        class="text-muted text-sm hover:text-white transition-colors duration-150">Roof Repair</a></li>
             <li><a href="/services/roof-replacement.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">Roof Replacement</a></li>
             <li><a href="/services/home-remodeling.html"    class="text-muted text-sm hover:text-white transition-colors duration-150">Home Remodeling</a></li>
@@ -974,7 +1336,7 @@
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150" aria-current="page">About Us</a></li>
+            <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
             <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>
