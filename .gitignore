@@ -1,3 +1,11 @@
 node_modules/
 temporary screenshots/
 .DS_Store
+
+# Hero video — the raw client source and the working trim preview stay OUT of git.
+# Only the FINAL compressed clip (H.264, audio stripped, ~2-3MB) gets committed, and
+# that final clip now LIVES AT brand_assets/hero-background.mp4 — so that path is
+# deliberately NOT ignored. Raw sources belong in brand_assets/*-raw.* instead.
+brand_assets/hero-background-preview.mp4
+brand_assets/*-raw.mp4
+brand_assets/*-raw.mov
