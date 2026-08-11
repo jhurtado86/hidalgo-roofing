@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- TITLE COLLISION RULE: leads on "Roof Replacement" — distinct from the homepage
-       ("Roofing & Remodeling in Pharr, TX") and from every sibling service page. -->
   <title>Roof Replacement in Pharr, TX | Hidalgo Roofing</title>
   <meta name="description" content="New roof installation in Pharr, TX and the Rio Grande Valley. Full tear-off, shingle and metal roofing, free inspections. BBB A+ accredited. Call today." />
   <meta name="keywords" content="roof replacement Pharr TX, new roof Pharr TX, roof installation McAllen TX, tear off re-roof Rio Grande Valley, shingle roof replacement Pharr, metal roof Hidalgo County" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Roof Replacement in Pharr, TX | Hidalgo Roofing" />
   <meta property="og:description" content="Full roof replacement across Pharr and the Rio Grande Valley. Tear-off to the deck, shingle and metal options, free inspections. Call (956) 460-3489." />
   <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/services/roof-replacement.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch (LAUNCH BLOCKER) -->
+  <meta property="og:image" content="https://placehold.co/1200x630" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Hidalgo Roofing &amp; Remodeling" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Roof Replacement in Pharr, TX | Hidalgo Roofing" />
   <meta name="twitter:description" content="Full roof replacement across Pharr and the Rio Grande Valley. Tear-off to the deck, shingle and metal options, free inspections." />
-  <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
+  <meta name="twitter:image" content="https://placehold.co/1200x630" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/brand.css" />
@@ -443,15 +439,6 @@
     ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
   </style>
 
-  <!-- ============================================================
-       SERVICE-PAGE SCHEMA — 3 blocks: Service + FAQPage + BreadcrumbList
-       provider references the homepage business node by @id (never a
-       re-declaration of the LocalBusiness).
-       NO price / priceRange / Offer price anywhere — [NEEDS INPUT] and the
-       Hard Rule routes all pricing intent to the free-inspection CTA.
-  ============================================================ -->
-
-  <!-- 1/3 — Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -601,7 +588,6 @@
   }
   </script>
 
-  <!-- 2/3 — FAQPage (6 Q&As; mirrors the visible accordion word-for-word) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -660,7 +646,6 @@
   }
   </script>
 
-  <!-- 3/3 — BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -697,19 +682,14 @@
 
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- ============================================================
-       STICKY NAVIGATION
-  ============================================================ -->
   <nav id="navbar">
     <div class="nav-row max-w-6xl mx-auto px-5 flex items-center justify-between">
 
-      <!-- Real client logo — on-disk filenames are logo.webp / logowhite.png. -->
       <a href="/" class="nav-logo-link group" aria-label="Hidalgo Roofing and Remodeling home">
         <img class="nav-logo nav-logo--white" src="/brand_assets/logowhite.png" width="384" height="120" alt="Hidalgo Roofing &amp; Remodeling LLC — roofing contractor in Pharr, Texas" />
         <img class="nav-logo nav-logo--gold"  src="/brand_assets/logo.webp"     width="384" height="120" alt="" aria-hidden="true" />
       </a>
 
-      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-7">
         <div class="nav-dropdown">
           <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
@@ -725,8 +705,6 @@
             <a href="/services/room-additions.html">Room Additions</a>
           </div>
         </div>
-        <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
-             city-page clone-and-localize pass. All city entries constant. -->
         <div class="nav-dropdown">
           <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
             Areas We Serve
@@ -740,18 +718,13 @@
             <a href="/areas/san-juan.html">San Juan</a>
           </div>
         </div>
-        <!-- END SHARED ZONE: Areas We Serve dropdown -->
         <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
-        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
-        <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
-             GHL tracking number, not Richard's personal line, before launch. One find-and-replace. -->
         <a href="tel:+19564603489" class="btn-primary text-sm py-2.5 px-5 phone-pulse ml-4">
           (956) 460-3489
         </a>
       </div>
 
-      <!-- Mobile hamburger -->
       <button id="hamburger" class="md:hidden p-2 rounded-lg border border-white/10 text-white hover:border-white/30 transition-colors duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -761,7 +734,6 @@
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden px-5 pb-4 mt-3 border-t border-white/10">
       <div class="flex flex-col gap-1 pt-4">
         <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-services-submenu">
@@ -776,8 +748,6 @@
           <a href="/services/home-remodeling.html">Home Remodeling</a>
           <a href="/services/room-additions.html">Room Additions</a>
         </div>
-        <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
-             city-page clone-and-localize pass. All city entries constant. -->
         <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-areas-submenu">
           Areas We Serve
           <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -789,9 +759,7 @@
           <a href="/areas/weslaco.html">Weslaco</a>
           <a href="/areas/san-juan.html">San Juan</a>
         </div>
-        <!-- END SHARED ZONE: Areas We Serve dropdown -->
         <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
-        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
           Call (956) 460-3489
@@ -800,15 +768,8 @@
     </div>
   </nav>
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
   <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Roof replacement in Pharr, Texas">
 
-    <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
-    <!-- Hero video: shared site-wide clip. brand_assets/hero-background.mp4 (H.264, no
-         audio, 9.8s, 1920x1080, faststart). Poster doubles as the reduced-motion and
-         video-off fallback. Decorative — aria-hidden; the section carries the aria-label. -->
     <video
       class="hero-video"
       autoplay
@@ -824,21 +785,17 @@
       <source src="/brand_assets/hero-background.mp4" type="video/mp4" />
     </video>
 
-    <!-- Dark overlay — heavier on the LEFT so the text block keeps its dark bed
-         no matter how bright the real hero-background.jpg turns out to be. -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
       linear-gradient(180deg, rgba(var(--color-dark-rgb), 0.80) 0%, rgba(var(--color-dark-rgb), 0.42) 25%, rgba(var(--color-dark-rgb), 0.38) 65%, rgba(var(--color-dark-rgb), 0.84) 100%),
       linear-gradient(90deg, rgba(var(--color-dark-rgb), 0.86) 0%, rgba(var(--color-dark-rgb), 0.62) 38%, transparent 72%),
       radial-gradient(ellipse 70% 100% at 0% 50%, rgba(var(--color-dark-rgb), 0.88) 0%, transparent 68%);
     "></div>
 
-    <!-- Edge vignette -->
     <div class="hero-vignette absolute inset-0 z-[2]"></div>
 
     <div class="hero-outer relative z-10 max-w-5xl mx-auto px-5 w-full">
       <div class="hero-text-block max-w-2xl fade-up">
 
-        <!-- Breadcrumb (mirrors the BreadcrumbList JSON-LD above) -->
         <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span class="sep" aria-hidden="true">/</span>
@@ -847,14 +804,10 @@
           <span class="current">Roof Replacement</span>
         </nav>
 
-        <!-- BBB A+ emphasis — client-requested trust signal.
-             [NEEDS INPUT] the real BBB accreditation mark is not in brand_assets/ —
-             text badge only until it lands. Do NOT fabricate a BBB logo. -->
         <div class="mb-6">
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 52px; width: auto; max-height: 60px; display: block;" />
         </div>
 
-        <!-- Eyebrow -->
         <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-line); margin-bottom: 18px; text-shadow: 0 1px 8px rgba(0,0,0,0.45);">Roof Replacement &middot; Pharr, TX &amp; the Rio Grande Valley</p>
 
         <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
@@ -866,7 +819,6 @@
           When a roof is worn through rather than damaged in one spot, patching it just moves the leak. We strip it to the deck, fix what is underneath, and build it back properly. <strong style="color: var(--color-bg);">Free inspection and a written quote</strong> before anything comes off.
         </p>
 
-        <!-- CTAs — primary intake routes to the GHL form at /#contact. -->
         <div class="flex flex-wrap gap-4 mb-10">
           <a href="tel:+19564603489" class="btn-primary text-base px-7 py-4">
             Call Now — (956) 460-3489
@@ -877,7 +829,6 @@
           </a>
         </div>
 
-        <!-- Stats row -->
         <div class="hero-stats flex flex-wrap gap-8">
           <div>
             <div class="font-display font-bold text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
@@ -898,18 +849,11 @@
       </div>
     </div>
 
-    <!-- Gold accent bridge -->
     <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-primary) 18%, var(--color-primary) 82%, transparent 100%); opacity: 0.92;"></div>
   </section>
 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
   <main id="main-content">
 
-    <!-- ============================================================
-         SECTION: intro — single column, no photo
-    ============================================================ -->
     <section class="section-mid atmo wash-navy-tr py-20" aria-label="About roof replacement in Pharr and the Rio Grande Valley">
       <div class="max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
@@ -928,14 +872,7 @@
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         SPLIT 1 of 2 — light, photo RIGHT
-    ============================================================ -->
     <section class="section-dark atmo wash-navy-tr py-24" aria-label="The roof tear-off and replacement process in Pharr">
-      <!-- Wider shell + a photo column weighted over the text column, matching the
-           homepage section photos. Ratio 4:3 is unchanged — the CONTAINER grows, per the
-           one-ratio-site-wide rule. Below lg the grid is single-column and the photo
-           goes full-width on its own. -->
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
 
@@ -972,7 +909,6 @@
 
           <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
             <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
               <img src="/brand_assets/image_68a468d95c7cd75eb8018a41.webp" alt="Completed roof replacement on a two-story home in Edinburg, Texas" loading="lazy" />
             </div>
           </div>
@@ -981,16 +917,12 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         SPLIT 2 of 2 — DARK, photo LEFT
-    ============================================================ -->
     <section class="dark-section py-24" aria-label="Choosing roofing material for a new roof in the Rio Grande Valley">
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
 
           <div class="fade-up lg:order-1">
             <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
               <img src="/brand_assets/unnamed-30.jpg" alt="Architectural asphalt shingle roof installed during a replacement in Mission, Texas" loading="lazy" />
             </div>
           </div>
@@ -1021,9 +953,6 @@
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         SECTION: whats-included — 6 icon-free centered cards
-    ============================================================ -->
     <section id="included" class="section-mid atmo wash-ember-tl py-24" aria-label="What's included with every roof replacement">
       <div class="max-w-6xl mx-auto px-5">
         <div class="text-center mb-12 fade-up">
@@ -1074,9 +1003,6 @@
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         SECTION: faq — 6 Q&As, mirrors the FAQPage JSON-LD exactly
-    ============================================================ -->
     <section id="faq" class="section-dark atmo wash-ember-tl py-20" aria-label="Roof replacement questions from Pharr and Rio Grande Valley homeowners">
       <div class="max-w-4xl mx-auto px-5">
         <div class="text-center mb-12 fade-up">
@@ -1155,9 +1081,6 @@
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         SECTION: related-services — compact in-body cross-links
-    ============================================================ -->
     <section class="section-mid atmo wash-navy-tr py-12" aria-label="Other services at Hidalgo Roofing and Remodeling">
       <div class="max-w-4xl mx-auto px-5 text-center fade-up">
         <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent-deep); margin-bottom: 12px;">Explore More Services</p>
@@ -1177,13 +1100,7 @@
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         SECTION: final-cta — shared partial pattern, identical markup to the
-         flagship. Intake is the REAL one from CLAUDE.md (free inspection /
-         book an appointment -> GHL form at /#contact). Never "Get a Free Quote".
-    ============================================================ -->
     <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection for a replacement">
-      <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
       <div class="absolute inset-0" style="background: url('/brand_assets/cta-background.png') center center / cover no-repeat;"></div>
       <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.68);"></div>
       <div class="dark-cta-ramp"></div>
@@ -1233,16 +1150,11 @@
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
   <footer class="dark-section pt-16 pb-8 border-t" style="border-color: rgba(255,255,255,0.08);" aria-label="Footer">
     <div class="max-w-6xl mx-auto px-5">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
 
-        <!-- Brand -->
         <div class="col-span-2 md:col-span-1">
-          <!-- White logo variant — the footer sits on --color-dark. -->
           <a href="/" class="flex items-center mb-3" aria-label="Hidalgo Roofing and Remodeling home">
             <img class="footer-logo" src="/brand_assets/logowhite.png" width="384" height="120" alt="Hidalgo Roofing &amp; Remodeling LLC" />
           </a>
@@ -1263,14 +1175,9 @@
             </p>
           </div>
 
-          <!-- BBB accreditation mark — footer credential, closing the NAP column.
-               Deliberately smaller than the hero lockup (40px vs 52px); the footer is
-               a tighter space. Same third-party trademark rules as the hero: never
-               recolor or restretch. -->
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 40px; width: auto; max-height: 48px; display: block; margin-top: 20px;" />
         </div>
 
-        <!-- Services -->
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Services</h2>
           <ul class="space-y-2.5">
@@ -1283,19 +1190,16 @@
           </ul>
         </div>
 
-        <!-- Company -->
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
             <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>
             <li><a href="/#contact"      class="text-muted text-sm hover:text-white transition-colors duration-150">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Service Area -->
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Areas We Serve</h2>
           <ul class="space-y-2.5">
@@ -1382,11 +1286,6 @@
 
   <!-- GHL CHAT WIDGET SCRIPT -->
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a6fe6f48b3dcb78a5968b90"></script>
-
-  <!-- GHL EXTERNAL TRACKING SCRIPT — wired in <head>, per CLAUDE.md's documented
-       insertion point. This marker is left as a pointer so the slot is not filled twice. -->
-
-  <!-- GHL FORM EMBED SCRIPT GOES HERE -->
 
 </body>
 </html>

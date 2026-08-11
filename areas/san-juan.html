@@ -9,22 +9,20 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://www.hidalgoroofingremodelingtx.com/areas/san-juan.html" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Roofing &amp; Remodeling in San Juan, TX | Hidalgo Roofing" />
   <meta property="og:description" content="Roofing, storm restoration and remodeling for San Juan, TX. BBB A+ accredited, 24/7 answer, free roof inspections. Call (956) 460-3489." />
   <meta property="og:url" content="https://www.hidalgoroofingremodelingtx.com/areas/san-juan.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch (LAUNCH BLOCKER) -->
+  <meta property="og:image" content="https://placehold.co/1200x630" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Hidalgo Roofing &amp; Remodeling" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Roofing &amp; Remodeling in San Juan, TX | Hidalgo Roofing" />
   <meta name="twitter:description" content="Roofing, storm restoration and remodeling for San Juan, TX. BBB A+ accredited, 24/7 answer, free roof inspections." />
-  <meta name="twitter:image" content="https://placehold.co/1200x630" /><!-- PLACEHOLDER: same 1200×630 image -->
+  <meta name="twitter:image" content="https://placehold.co/1200x630" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/brand.css" />
@@ -441,18 +439,6 @@
     ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
   </style>
 
-  <!-- ============================================================
-       CITY-PAGE SCHEMA — 3 blocks:
-         1) LocalBusiness REF — same @id as the homepage business node, so this
-            is a reference to that entity, NOT a second declaration. Address,
-            hours and offer catalog stay on the homepage only.
-         2) FAQPage — 5 city-scoped Q&As (min 4), text derived from the
-            visible accordion so the two can never drift.
-         3) BreadcrumbList.
-       areaServed = San Juan ONLY — never the full city list.
-  ============================================================ -->
-
-  <!-- 1/3 — LocalBusiness reference -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -472,7 +458,6 @@
   }
   </script>
 
-  <!-- 2/3 — FAQPage (5 city-scoped Q&As) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -523,7 +508,6 @@
   }
   </script>
 
-  <!-- 3/3 — BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -560,19 +544,14 @@
 
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- ============================================================
-       STICKY NAVIGATION
-  ============================================================ -->
   <nav id="navbar">
     <div class="nav-row max-w-6xl mx-auto px-5 flex items-center justify-between">
 
-      <!-- Real client logo — on-disk filenames are logo.webp / logowhite.png. -->
       <a href="/" class="nav-logo-link group" aria-label="Hidalgo Roofing and Remodeling home">
         <img class="nav-logo nav-logo--white" src="/brand_assets/logowhite.png" width="384" height="120" alt="Hidalgo Roofing &amp; Remodeling LLC — roofing contractor in Pharr, Texas" />
         <img class="nav-logo nav-logo--gold"  src="/brand_assets/logo.webp"     width="384" height="120" alt="" aria-hidden="true" />
       </a>
 
-      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-7">
         <div class="nav-dropdown">
           <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
@@ -588,8 +567,6 @@
             <a href="/services/room-additions.html">Room Additions</a>
           </div>
         </div>
-        <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
-             city-page clone-and-localize pass. All city entries constant. -->
         <div class="nav-dropdown">
           <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted hover:text-white transition-colors duration-150">
             Areas We Serve
@@ -603,18 +580,13 @@
             <a href="/areas/san-juan.html" aria-current="page">San Juan</a>
           </div>
         </div>
-        <!-- END SHARED ZONE: Areas We Serve dropdown -->
         <a href="/about.html" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">About</a>
-        <!-- OPTIONAL MODULE LINK (desktop nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Reviews</a> -->
         <a href="/#contact"     class="nav-link text-sm font-medium text-muted hover:text-white transition-colors duration-150">Contact</a>
-        <!-- [VERIFY] (956) 460-3489 is the client's currently published line. Confirm it is the
-             GHL tracking number, not Richard's personal line, before launch. One find-and-replace. -->
         <a href="tel:+19564603489" class="btn-primary text-sm py-2.5 px-5 phone-pulse ml-4">
           (956) 460-3489
         </a>
       </div>
 
-      <!-- Mobile hamburger -->
       <button id="hamburger" class="md:hidden p-2 rounded-lg border border-white/10 text-white hover:border-white/30 transition-colors duration-150" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -624,7 +596,6 @@
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden px-5 pb-4 mt-3 border-t border-white/10">
       <div class="flex flex-col gap-1 pt-4">
         <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-services-submenu">
@@ -639,8 +610,6 @@
           <a href="/services/home-remodeling.html">Home Remodeling</a>
           <a href="/services/room-additions.html">Room Additions</a>
         </div>
-        <!-- SHARED ZONE: Areas We Serve dropdown — do NOT modify during
-             city-page clone-and-localize pass. All city entries constant. -->
         <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-areas-submenu">
           Areas We Serve
           <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -652,9 +621,7 @@
           <a href="/areas/weslaco.html">Weslaco</a>
           <a href="/areas/san-juan.html" aria-current="page">San Juan</a>
         </div>
-        <!-- END SHARED ZONE: Areas We Serve dropdown -->
         <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
-        <!-- OPTIONAL MODULE LINK (mobile nav, #reviews): re-enable with the Review widget module: <a href="/#reviews" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a> -->
         <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
         <a href="tel:+19564603489" class="btn-primary mt-3 justify-center">
           Call (956) 460-3489
@@ -663,15 +630,8 @@
     </div>
   </nav>
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
   <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Roofing and remodeling in San Juan, Texas">
 
-    <!-- OFF-LIMITS: hero-background — dedicated named file only, never a content photo -->
-    <!-- Hero video: shared site-wide clip. brand_assets/hero-background.mp4 (H.264, no
-         audio, 9.8s, 1920x1080, faststart). Poster doubles as the reduced-motion and
-         video-off fallback. Decorative — aria-hidden; the section carries the aria-label. -->
     <video
       class="hero-video"
       autoplay
@@ -754,12 +714,8 @@
     <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-primary) 18%, var(--color-primary) 82%, transparent 100%); opacity: 0.92;"></div>
   </section>
 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
   <main id="main-content">
 
-    <!-- CITY-SWAP: intro -->
     <section class="section-mid atmo wash-navy-tr py-20" aria-label="About our roofing work in San Juan">
       <div class="max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
@@ -775,18 +731,10 @@
         </p>
       </div>
     </section>
-    <!-- END CITY-SWAP: intro -->
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         COVERAGE SPLIT — text + local-anchor checklist / one photo
-    ============================================================ -->
     <section class="section-dark atmo wash-navy-tr py-24" aria-label="Where we work in San Juan">
-      <!-- Wider shell + a photo column weighted over the text column, matching the
-           homepage section photos. Ratio 4:3 is unchanged — the CONTAINER grows, per the
-           one-ratio-site-wide rule. Below lg the grid is single-column and the photo
-           goes full-width on its own. -->
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
 
@@ -802,8 +750,6 @@
               A lot of San Juan went up during the tract-building decades, which means plenty of houses here are on roof number two now, or overdue for it. Second roofs bring their own list: brittle felt, layered shingles, and decking nobody has looked at since the house was framed. That is a tear-off conversation more often than a patch.
             </p>
 
-            <!-- CITY-SWAP: local-anchors -->
-            <!-- Every anchor below was web-verified for this build (Basilica of the National Shrine of Our Lady of San Juan del Valle at 400 Virgen de San Juan Blvd; Raul Longoria Rd / FM 1426 running Nolana Loop to I-2; Nolana Loop; Business 83; I-2). Streets and public landmarks only — no residential subdivision is named by design. -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mt-2 mb-2">
               <div class="flex items-start gap-2.5 text-sm" style="color: var(--color-muted); line-height: 1.6;">
                 <svg class="mt-0.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-deep)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -830,12 +776,10 @@
                 The Pharr line and everything east of it
               </div>
             </div>
-            <!-- END CITY-SWAP: local-anchors -->
           </div>
 
           <div class="fade-up lg:order-2" style="transition-delay: 0.1s;">
             <div class="photo-frame">
-              <!-- PLACEHOLDER: real client project photo pending — alt text is FINAL, do not change on swap -->
               <img src="/brand_assets/492970839_1316328420501221_6774486420743312624_n.jpg" alt="Completed residential shingle roof on a San Juan, Texas home" loading="lazy" />
             </div>
           </div>
@@ -844,8 +788,6 @@
       </div>
     </section>
 
-    <!-- CITY-SWAP: why-city -->
-    <!-- DARK section, 2-column checklist, no photo, no icons (per TEMPLATE-SPEC) -->
     <section class="dark-section py-24" aria-label="Why San Juan homeowners choose Hidalgo Roofing">
       <div class="max-w-6xl mx-auto px-5">
         <div class="text-center mb-12 fade-up">
@@ -910,11 +852,9 @@
         </div>
       </div>
     </section>
-    <!-- END CITY-SWAP: why-city -->
 
     <div class="divider"></div>
 
-    <!-- CITY-SWAP: faq -->
     <section id="faq" class="section-dark atmo wash-ember-tl py-20" aria-label="San Juan roofing questions">
       <div class="max-w-4xl mx-auto px-5">
         <div class="text-center mb-12 fade-up">
@@ -980,15 +920,10 @@
         </div>
       </div>
     </section>
-    <!-- END CITY-SWAP: faq -->
 
     <div class="divider"></div>
 
-    <!-- ============================================================
-         SECTION: final-cta — shared partial pattern, city-scoped headline
-    ============================================================ -->
     <section class="dark-section relative py-24 overflow-hidden" aria-label="Book a free roof inspection in San Juan">
-      <!-- OFF-LIMITS: cta-background — dedicated named file only, never a content photo -->
       <div class="absolute inset-0" style="background: url('/brand_assets/cta-background.png') center center / cover no-repeat;"></div>
       <div class="absolute inset-0" style="background: rgba(var(--color-dark-rgb), 0.68);"></div>
       <div class="dark-cta-ramp"></div>
@@ -1038,16 +973,11 @@
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
   <footer class="dark-section pt-16 pb-8 border-t" style="border-color: rgba(255,255,255,0.08);" aria-label="Footer">
     <div class="max-w-6xl mx-auto px-5">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
 
-        <!-- Brand -->
         <div class="col-span-2 md:col-span-1">
-          <!-- White logo variant — the footer sits on --color-dark. -->
           <a href="/" class="flex items-center mb-3" aria-label="Hidalgo Roofing and Remodeling home">
             <img class="footer-logo" src="/brand_assets/logowhite.png" width="384" height="120" alt="Hidalgo Roofing &amp; Remodeling LLC" />
           </a>
@@ -1068,14 +998,9 @@
             </p>
           </div>
 
-          <!-- BBB accreditation mark — footer credential, closing the NAP column.
-               Deliberately smaller than the hero lockup (40px vs 52px); the footer is
-               a tighter space. Same third-party trademark rules as the hero: never
-               recolor or restretch. -->
           <img src="/brand_assets/bbb.png" alt="BBB Accredited Business A+ Rating" width="1000" height="386" style="height: 40px; width: auto; max-height: 48px; display: block; margin-top: 20px;" />
         </div>
 
-        <!-- Services -->
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Services</h2>
           <ul class="space-y-2.5">
@@ -1088,19 +1013,16 @@
           </ul>
         </div>
 
-        <!-- Company -->
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
             <li><a href="/about.html"   class="text-muted text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <!-- OPTIONAL MODULE LINK (footer, #reviews): re-enable with the Review widget module: <li><a href="/#reviews" class="text-muted text-sm hover:text-white transition-colors duration-150">Reviews</a></li> -->
             <li><a href="/#service-area" class="text-muted text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
             <li><a href="/#faq"          class="text-muted text-sm hover:text-white transition-colors duration-150">FAQ</a></li>
             <li><a href="/#contact"      class="text-muted text-sm hover:text-white transition-colors duration-150">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Service Area -->
         <div>
           <h2 class="font-display font-bold text-white text-sm uppercase tracking-widest mb-4">Areas We Serve</h2>
           <ul class="space-y-2.5">
@@ -1187,11 +1109,6 @@
 
   <!-- GHL CHAT WIDGET SCRIPT -->
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a6fe6f48b3dcb78a5968b90"></script>
-
-  <!-- GHL EXTERNAL TRACKING SCRIPT — wired in <head>, per CLAUDE.md's documented
-       insertion point. This marker is left as a pointer so the slot is not filled twice. -->
-
-  <!-- GHL FORM EMBED SCRIPT GOES HERE -->
 
 </body>
 </html>
