@@ -186,17 +186,20 @@ icons, accents, and the logo, so brand recognition is intact.
   Jason M., Elena R.) — they're unattributed and unverified; the widget is the single
   source of truth.
 - Price range: `[NEEDS INPUT — for JSON-LD priceRange; route all pricing intent to the
-  free-inspection / quote CTA]`
+  Book an Appointment CTA]`
 
 ### Key operational facts
 - Service model: **mobile / on-site residential** (no retail storefront; office at Pharr
   address)
 - Service-area: **Rio Grande Valley — Hidalgo County core** (Pharr, McAllen, Edinburg,
   Mission, Weslaco, San Juan, plus Alamo, Palmview, Donna, Mercedes in areaServed)
-- Intake method / primary CTA framing: **"Get a Free Inspection"** / "Book an Appointment"
-  → routes to GHL form. Secondary urgent CTA: **same-day emergency roof tarping** (call).
+- Intake method / primary CTA framing: **"Book an Appointment" / "Contact Us"** → routes
+  to GHL form. **Richard does NOT offer free inspections or free quotes — do not use
+  either phrase anywhere on the site.** Secondary urgent CTA: **same-day emergency roof
+  tarping** (call now). Every CTA routes to either the appointment form or the direct call
+  line.
 - Confirmed differentiators: **BBB A+ Accredited · 24/7 availability · same-day emergency
-  roof tarping · insurance claims assistance · residential-only · free roof inspections ·
+  roof tarping · insurance claims assistance · residential-only ·
   20+ years experience**
 
 ### Hours (for `openingHoursSpecification`)
@@ -366,14 +369,14 @@ Unique intro + unique "why [City] chooses us" per page.
 
 **Title/description patterns — FILL:**
 - Homepage: `Roofing & Remodeling in Pharr, TX | Hidalgo Roofing` /
-  "BBB A+ roofing, storm restoration & remodeling in Pharr, TX. 24/7 service, free
-  inspections. Call for a free quote." `[trim to <160]`
+  "BBB A+ roofing, storm restoration & remodeling in Pharr, TX. 24/7 service. Book an
+  appointment today." `[trim to <160]`
 - Service page: `[Service] in Pharr, TX | Hidalgo Roofing & Remodeling` /
-  "[Service] in Pharr & the RGV. BBB A+, 24/7, free inspection. Call today." (flagship
+  "[Service] in Pharr & the RGV. BBB A+ accredited, 24/7. Book an appointment." (flagship
   Roofing title must lead differently than the homepage)
 - City page: `Roofing & Remodeling in [City], TX | Hidalgo Roofing` /
   "Trusted [City], TX roofing, storm restoration & remodeling. BBB A+, 24/7 service.
-  Free inspection."
+  Book an appointment."
 
 ---
 
@@ -496,7 +499,9 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 ## Hard Rules — FROZEN
 - No invented facts; confirm before filling any `[NEEDS INPUT]`.
 - No price / range / "starting at" unless explicitly confirmed — route pricing intent to
-  the free-inspection / quote CTA (copy, FAQ, AND JSON-LD Offer blocks).
+  the Book an Appointment CTA (copy, FAQ, AND JSON-LD Offer blocks).
+- **Never write "free inspection," "free quote," or "free estimate" anywhere.** Richard
+  does not offer them. Route to "Book an Appointment" instead.
 - No insurance coverage-outcome claims.
 - No relationship ("family-owned") claim without written confirmation.
 - Review widget/aggregateRating only with the confirmed 14-review data AND on-page display;
