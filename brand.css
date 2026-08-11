@@ -1,43 +1,60 @@
 /* ============================================================
    brand.css — single source of truth for the color system.
-   primary = derive from client logo.
-   Neutral graphite / slate placeholders — the template ships NO
-   brand color. Recolor a client by editing ONLY the tokens in the
-   first :root block below; everything else references these.
-   Recolor check (every build): accent-deep vs bg >=4.5:1 ·
-   accent-bright vs dark >=4.5:1 · muted vs bg-2 >=4.5:1.
+   CLIENT: Hidalgo Roofing & Remodeling LLC (Pharr, TX)
+
+   Palette derived from the client's gold logo mark. Dark sections
+   are deep warm brown (--color-dark) with gold as the accent, per
+   the strategy-lock decision in CLAUDE.md.
+
+   Recolor check (run every build — fix the TOKEN, never the page):
+     accent-deep   vs bg    >= 4.5:1   ->  5.50:1  PASS
+     accent-bright vs dark  >= 4.5:1   -> 10.25:1  PASS
+     muted         vs bg-2  >= 4.5:1   ->  7.15:1  PASS
+     dark ink      on primary (buttons) ->  5.85:1  PASS
+     dark ink      on accent  (hover)   ->  8.34:1  PASS
+
+   NOTE: white text on the gold buttons fails (3.15:1 on primary,
+   2.21:1 on accent) — gold buttons carry DARK ink, never white.
    ============================================================ */
 :root {
   /* — Core palette (hex) — */
-  --color-primary:      #232838;  /* brand primary slot (= dark) */
-  --color-primary-mid:  #313749;  /* first dark-elevation step + primary hover */
-  --color-accent:       #5E6675;  /* the "pop" / CTA accent — replace per client */
-  --color-accent-deep:  #4A515E;  /* accent hover / pressed — the on-LIGHT accent fallback */
-  --color-accent-bright:#A2AEC3;  /* on-DARK accent — every accent use on --color-dark; keep >=4.5:1 vs dark */
-  --color-dark:         #232838;  /* single canonical dark-section bg (== primary) */
-  --color-dark-3:       #363D4E;  /* deepest dark-elevation surface */
-  --color-ink:          #1A1D28;  /* body + heading text */
-  --color-muted:        #666D79;  /* muted / secondary text — clears 4.5:1 vs bg-2 (4.74) & bg (5.21) */
-  --color-muted-light:  #8A929E;  /* lighter muted text */
-  --color-line:         #D8DAE2;  /* hairlines / borders */
+  --color-primary:      #B68A3B;  /* brand gold — primary buttons, brand accents */
+  --color-primary-mid:  #9A7230;  /* mid-tone — hover, secondary buttons, dividers on dark */
+  --color-accent:       #D4A84B;  /* accent — button hover, icons/highlights ON DARK */
+  --color-accent-deep:  #8A6228;  /* on-LIGHT accent fallback — small text/icons/rules on white */
+  --color-accent-bright:#E4BC63;  /* on-DARK accent — every accent use on --color-dark; >=4.5:1 vs dark */
+  --color-dark:         #1E1108;  /* single canonical dark-section bg (deep warm brown) */
+  --color-dark-3:       #2E1D0F;  /* deepest dark-elevation surface */
+  --color-ink:          #1C1208;  /* body + heading text (near-black, warm) */
+  --color-silver:       #858382;  /* logo subtitle gray — muted/muted-light derive from this */
+  --color-muted:        #525152;  /* muted / secondary text on light — 7.15:1 vs bg-2 */
+  --color-muted-light:  #B9B3AC;  /* muted text ON DARK — 8.81:1 vs dark */
+  --color-line:         #E4DFD6;  /* hairlines / borders (warm) */
   --color-bg:           #FFFFFF;  /* page background */
-  --color-bg-2:         #F3F4F7;  /* light section tint */
-  --color-rating:       #F59E0B;  /* star-rating gold — functional, not brand */
+  --color-bg-2:         #F7F5F1;  /* light section tint (warm off-white) */
+  --color-rating:       #D4A84B;  /* star-rating gold — functional; no stars ship until reviews confirmed */
 
   /* — Channel triplets (R, G, B) for rgba() tinting — */
-  --color-primary-rgb:     35, 40, 56;
-  --color-primary-mid-rgb: 49, 55, 73;
-  --color-accent-rgb:      94, 102, 117;
-  --color-accent-deep-rgb: 74, 81, 94;
-  --color-accent-bright-rgb: 162, 174, 195;
-  --color-dark-rgb:        35, 40, 56;
-  --color-dark-3-rgb:      54, 61, 78;
-  --color-ink-rgb:         26, 29, 40;
+  --color-primary-rgb:       182, 138, 59;
+  --color-primary-mid-rgb:   154, 114, 48;
+  --color-accent-rgb:        212, 168, 75;
+  --color-accent-deep-rgb:   138, 98, 40;
+  --color-accent-bright-rgb: 228, 188, 99;
+  --color-dark-rgb:          30, 17, 8;
+  --color-dark-3-rgb:        46, 29, 15;
+  --color-ink-rgb:           28, 18, 8;
 
-  /* size the nav off the client logo — see CLAUDE.md logo rules */
-  --nav-height:         96px;   /* nav bar height — starting point, not fixed */
-  --nav-logo-height:    72px;   /* client logo <img> height in the nav */
-  --footer-logo-height: 116px;  /* client logo <img> height in the footer */
+  /* Nav/logo sizing — DERIVED from the real client logo.
+     brand_assets/logo.webp + logowhite.png are 384x120 = a wide 3.2:1 lockup,
+     so the template's tall defaults (72/116px) do not apply here:
+       nav logo    64px tall -> 205px wide, clears inside a 96px bar (16px each side)
+       footer logo 72px tall -> 230px wide, fits the ~254px footer brand column
+     (the 116px default would render 371px wide and overflow that column). */
+  --nav-height:         96px;   /* nav bar height — must clear --nav-logo-height */
+  --nav-logo-height:    64px;   /* client logo <img> height in the nav */
+  --footer-logo-height: 72px;   /* client logo <img> height in the footer */
+  --logo-aspect:        3.2;    /* 384/120 — logos are sized by WIDTH off this so a
+                                   max-width clamp scales them instead of squashing. */
 }
 
 /* ============================================================
@@ -65,3 +82,33 @@
 }
 .photo-frame--portrait { aspect-ratio: 3 / 4; }
 .photo-frame--portrait > img { object-position: center top; }
+
+/* ============================================================
+   Desktop nav dropdowns — panel anchored to the LINK TEXT.
+
+   The nav bar stays transparent in every state. No background is added on
+   hover, focus or open — do not reintroduce one.
+
+   Two things pushed the panel down, and both are neutralised here:
+
+   1. The per-page inline <style> ships `.nav-dropdown-menu { margin-top: 14px }`
+      plus a `::before` hover bridge (top:-14px; height:14px) that existed only
+      to keep :hover alive across that 14px dead zone. Margin zeroed; bridge
+      collapsed (left at top:-14px it would overlay the nav and swallow clicks
+      on the trigger).
+
+   2. `top: 100%` resolved against `.nav-dropdown`, which is
+      `height: var(--nav-height)` — so the panel hung off the bottom of the FULL
+      96px bar. Because the bar is transparent there is no surface there, and
+      the 38px between the link text and the panel just showed hero video.
+
+   Fix: anchor to the bottom of the link text instead. `.nav-dropdown` is
+   flex/align-items:center, so 50% is the bar's vertical centre and the trigger
+   is 20px tall — its text bottom is 50% + 10px = 58px. Expressed as a calc off
+   50% rather than a hard 58px so it still tracks if --nav-height changes.
+   ============================================================ */
+#navbar .nav-dropdown-menu {
+  top: calc(50% + 10px);   /* = 58px: bottom edge of the nav link text */
+  margin-top: 0;
+}
+#navbar .nav-dropdown-menu::before { top: 0; height: 0; }
