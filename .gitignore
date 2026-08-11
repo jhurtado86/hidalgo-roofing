@@ -9,3 +9,30 @@ temporary screenshots/
 brand_assets/hero-background-preview.mp4
 brand_assets/*-raw.mp4
 brand_assets/*-raw.mov
+
+# CTA background — the PNG source stays on disk for re-encoding, but only the
+# WebP that the pages actually reference ships. The PNG is 2.2MB vs 275KB.
+brand_assets/cta-background.png
+
+# Unreferenced client photos. Kept on disk as a source pool to draw from when
+# filling future photo slots, but no page links them, so they must not ship.
+# Anything promoted into a page must be removed from this list.
+brand_assets/IMG_2456-e1571667634434.webp
+brand_assets/Sidewalks-2-1.jpg
+brand_assets/cea7d55d9e7c08d2e202372e111a346e-scaled.jpg
+brand_assets/image_68a468d95c7cd75eb8018a41-2.webp
+brand_assets/image_68a468d95c7cd75eb8018a62.jpeg
+brand_assets/image_68a468d95c7cd75eb8018a91-1-2.webp
+brand_assets/o-2025-10-16T231343.341.jpg
+brand_assets/o-2025-10-16T231348.979.jpg
+brand_assets/o-2025-10-16T231356.431.jpg
+brand_assets/o-2025-10-16T231401.401.jpg
+brand_assets/o-2025-10-16T231405.505.jpg
+brand_assets/surge_media_1757527718105_DsPXvywvX.webp
+brand_assets/unnamed-14.jpg
+brand_assets/unnamed-20.jpg
+brand_assets/unnamed-21.jpg
+brand_assets/unnamed-25.jpg
+brand_assets/unnamed-26.jpg
+brand_assets/unnamed-31.jpg
+brand_assets/unnamed-36.jpg
