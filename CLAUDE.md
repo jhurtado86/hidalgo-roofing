@@ -105,15 +105,26 @@ icons, accents, and the logo, so brand recognition is intact.
 
 ## Integration placeholders — FROZEN insertion points
 
-- `<!-- GHL CONTACT FORM EMBED -->` — `[NEEDS INPUT — form name + embed]`. Use the GHL
-  embed; never a custom form.
-- `<!-- GHL CHAT WIDGET SCRIPT -->` — `[NEEDS INPUT]` (insert before `</body>`).
-- `<!-- GHL EXTERNAL TRACKING SCRIPT -->` — `[NEEDS INPUT]` (insert in `<head>`).
-- `<!-- GHL REVIEW WIDGET EMBED -->` — **WIRE.** Client confirmed: 14 Google reviews,
-  displayed publicly as 5 stars, review widget goes on the homepage. `[VERIFY — exact
-  decimal rating (5.0 vs 4.9) before publishing aggregateRating]`.
-- `<!-- GOOGLE MAPS EMBED -->` — **WIRE.** Public address confirmed (415 N Sugar Rd
-  Suite 7, Pharr, TX 78577).
+> ✅ **All five GHL/Maps integrations are WIRED and verified in the build.** They are no
+> longer `[NEEDS INPUT]`. Do not re-stub them; treat the live IDs below as the source of
+> truth and keep the insertion-point comments in place.
+
+- `<!-- GHL CONTACT FORM EMBED -->` — ✅ **WIRED.** Homepage `#contact` section only
+  (`index.html`), plus `form_embed.js` from `link.msgsndr.com`. Inline form id
+  `inline-fqPY6ttwpvXfYJGz00CN`. Every "Book an Appointment" CTA site-wide routes to
+  `/#contact`. Use the GHL embed; never a custom form.
+- `<!-- GHL CHAT WIDGET SCRIPT -->` — ✅ **WIRED** on all 14 pages before `</body>`
+  (`widgets.leadconnectorhq.com/loader.js`, `data-widget-id="6a6fe6f48b3dcb78a5968b90"`).
+- `<!-- GHL EXTERNAL TRACKING SCRIPT -->` — ✅ **WIRED** on all 14 pages in `<head>`
+  (`link.msgsndr.com/js/external-tracking.js`,
+  `data-tracking-id="tk_4fe9b0075c124f6e9315032fb4b1db1b"`).
+- `<!-- GHL REVIEW WIDGET EMBED -->` — ✅ **WIRED** on the homepage `#reviews` section
+  (`reputationhub.site` iframe, `lc_reviews_widget`). The widget is the single source of
+  truth for reviews and updates live. **The exact-decimal `[VERIFY]` is MOOT:**
+  `aggregateRating` was deliberately removed from the JSON-LD, so no rating value is
+  hardcoded anywhere and none needs verifying. Do not reintroduce it.
+- `<!-- GOOGLE MAPS EMBED -->` — ✅ **WIRED** on the homepage `#contact` section. Public
+  address confirmed (415 N Sugar Rd Suite 7, Pharr, TX 78577).
 - `<!-- INSURANCE CARRIER LOGO ROW -->` — **DELETE.** No carrier partnerships confirmed.
   Insurance is covered in copy (claims-assistance framing), not a logo wall.
 - `<!-- FINANCING SECTION -->` — **DELETE** unless financing is confirmed. `[DECIDE —
@@ -181,8 +192,8 @@ icons, accents, and the logo, so brand recognition is intact.
   words). ⚠️ Do NOT use the flyer taglines "we've got you covered" / "stay covered" —
   both are on the banned-words list.
 - Review / reputation status: **14 Google reviews, 5-star public rating, live Google review
-  widget on homepage** `[VERIFY exact decimal]`. **Decision: rely on the live Google
-  widget only.** Do NOT reuse the current site's first-name testimonials (Maria C.,
+  widget on homepage** (widget ✅ wired; exact decimal no longer needed — see
+  `aggregateRating` below). **Decision: rely on the live Google widget only.** Do NOT reuse the current site's first-name testimonials (Maria C.,
   Jason M., Elena R.) — they're unattributed and unverified; the widget is the single
   source of truth.
 - Price range: `[NEEDS INPUT — for JSON-LD priceRange; route all pricing intent to the
@@ -330,9 +341,11 @@ created).
   services).
 - **PostalAddress:** **INCLUDE** — public address confirmed (415 N Sugar Rd Suite 7,
   Pharr, TX 78577).
-- **`aggregateRating`:** **INCLUDE** — 14 reviews, rating `[VERIFY exact decimal]`, and it
-  must be displayed on-page (homepage widget). Do not ship the rating value in schema until
-  the decimal is verified.
+- **`aggregateRating`:** ✅ **OMIT — decided and done.** No `aggregateRating`,
+  `ratingValue` or `reviewCount` ships anywhere in the JSON-LD. The live GHL review widget
+  updates on its own, so a hardcoded count is a maintenance liability that goes stale as
+  reviews accumulate; the widget is the on-page social proof. This also retires the
+  exact-decimal `[VERIFY]` — there is no rating value left to verify. Do not reintroduce.
 - **BBB A+ / accreditation → `additionalProperty`** (e.g. `{ "name": "BBB Rating",
   "value": "A+" }`, `{ "name": "BBB Accredited", "value": "Since 2016" }`). Any state
   license number also → `additionalProperty` once provided.
@@ -504,8 +517,8 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
   does not offer them. Route to "Book an Appointment" instead.
 - No insurance coverage-outcome claims.
 - No relationship ("family-owned") claim without written confirmation.
-- Review widget/aggregateRating only with the confirmed 14-review data AND on-page display;
-  verify the exact decimal first.
+- Review widget is the ONLY review surface. **Never ship `aggregateRating` / `ratingValue` /
+  `reviewCount` in JSON-LD** — deliberately removed; the live widget replaces it.
 - Never infer ownership/roles/relationships from social posts.
 - **Never publish a last name for Richard** (client instruction).
 - Never publish the owner's personal number — GHL tracking number only; grep returns zero
@@ -540,13 +553,27 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 
 ## Active Blockers — summary
 
-**Launch-blocking:**
-- ~~GHL tracking number~~ ✅ RESOLVED — (956) 403-6826 is wired site-wide
-- GHL contact-form embed
-- GHL chat widget + external tracking scripts
-- og-image (1200×630)
-- Exact Google rating decimal (for aggregateRating)
-- hero-background + cta-background images
+**Launch-blocking — ONE item left:**
+- **og-image (1200×630)** → `brand_assets/og-image.jpg`. Until it exists, all 13 indexable
+  pages point `og:image` + `twitter:image` at `https://placehold.co/1200x630` (26 refs,
+  line 16 and line 25 of each page). This is the only remaining launch blocker.
+
+**Launch-blocking — RESOLVED:**
+- ~~GHL tracking number~~ ✅ (956) 403-6826 wired site-wide
+- ~~GHL contact-form embed~~ ✅ wired on the homepage `#contact` + `form_embed.js`
+- ~~GHL chat widget~~ ✅ wired on all 14 pages
+- ~~GHL external tracking script~~ ✅ wired on all 14 pages
+- ~~GHL review widget~~ ✅ wired on the homepage `#reviews`
+- ~~Google Maps embed~~ ✅ wired on the homepage `#contact`
+- ~~Exact Google rating decimal~~ ✅ MOOT — `aggregateRating` removed, nothing to verify
+- ~~hero-background~~ ✅ `brand_assets/hero-background.mp4` (2.5 MB, in budget)
+- ~~cta-background~~ ✅ `brand_assets/cta-background.webp` (275 KB, converted from the
+  2.2 MB PNG; the PNG stays on disk but is gitignored)
+
+**Known open defect (not yet approved for fix):**
+- `poster="/brand_assets/hero-background-poster.jpg"` is referenced by all 14 pages but the
+  file **does not exist** — a 404 on every page load. Either generate the poster frame from
+  `hero-background.mp4` or drop the attribute.
 
 **Backfillable (build against placeholders, swap in one pass):**
 - Real project photos + gallery images
@@ -571,10 +598,11 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 
 **Remaining `[NEEDS INPUT]` / `[VERIFY]` (not decisions — data to collect before/at build):**
 - ~~GHL tracking number~~ ✅ RESOLVED — (956) 403-6826
-- GHL form embed + chat + tracking scripts
-- og-image, hero-background, cta-background images
-- Exact Google rating decimal (for aggregateRating)
-- Real project photos + Richard's headshot
+- ~~GHL form embed + chat + tracking scripts~~ ✅ RESOLVED — all wired
+- ~~Exact Google rating decimal~~ ✅ MOOT — `aggregateRating` removed
+- ~~hero-background, cta-background~~ ✅ RESOLVED — both real assets on disk
+- **og-image** — still missing; the last launch blocker
+- Richard's headshot (the `.photo-frame--portrait` slot in brand.css has no consumer yet)
 - priceRange, state license number, warranty terms, family-owned written confirmation
 - Legal name form for schema — "and" vs "&" — match his GBP listing exactly `[VERIFY]`
 - Red urgency accent — default NO; kept off unless a later call brings it in
