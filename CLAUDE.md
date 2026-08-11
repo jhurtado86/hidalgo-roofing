@@ -32,7 +32,7 @@ facts; confirm with the client / Juan before filling.
 | City 2 … City 6 | McAllen · Edinburg · Mission · Weslaco · San Juan (priority order + rationale below) |
 | city slugs | `mcallen` · `edinburg` · `mission` · `weslaco` · `san-juan` |
 | Region | Rio Grande Valley, TX (Hidalgo County) |
-| Phone (site) | `[NEEDS INPUT — GHL tracking number ONLY]` — current published line is (956) 460-3489; confirm whether this is the GHL tracking number or the owner's line before publishing |
+| Phone (site) | **(956) 403-6826** — CONFIRMED GHL tracking number (`tel:+19564036826`). This is the ONLY number that may appear on the site. The old published line (956) 460-3489 is retired — it must return zero grep hits. |
 | Email | hidalgoroofing9@gmail.com |
 | Domain | hidalgoroofingremodelingtx.com — canonical host **www** (`https://www.hidalgoroofingremodelingtx.com`, set as Vercel Primary day one) |
 
@@ -164,7 +164,9 @@ icons, accents, and the logo, so brand recognition is intact.
   **GBP is pinned to this Pharr address** — schema, NAP, and Maps embed all use Pharr, even
   though Facebook markets "McAllen"). → schema INCLUDES PostalAddress; Google Maps embed
   wired.
-- Phone (site): `[NEEDS INPUT — confirm GHL tracking number]` (published line: (956) 460-3489)
+- Phone (site): **(956) 403-6826** — CONFIRMED GHL tracking number. `tel:` hrefs use
+  `tel:+19564036826`; display text uses `(956) 403-6826`; JSON-LD `telephone` uses the
+  E.164 form `+19564036826`. Retired line: (956) 460-3489 (zero hits allowed).
 - Phone (owner personal — NOT FOR PUBLICATION): `[NEEDS INPUT — record so it's never
   mistaken for the site number; must return zero grep hits before deploy]`
 - Email: hidalgoroofing9@gmail.com
@@ -502,8 +504,9 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 - Never infer ownership/roles/relationships from social posts.
 - **Never publish a last name for Richard** (client instruction).
 - Never publish the owner's personal number — GHL tracking number only; grep returns zero
-  hits for the personal number before deploy. `[VERIFY (956) 460-3489 is the GHL number,
-  not Richard's personal line.]`
+  hits for the personal number before deploy. ✅ RESOLVED — the site number is the GHL
+  tracking number **(956) 403-6826**. The previously published (956) 460-3489 is retired
+  and must never reappear.
 - Never promote a client photo into `hero-background` / `cta-background`.
 - No readable license plates or privacy-sensitive photos.
 - Strip the template's red; gold `#B68A3B` primary, deep brown `#1E1108` dark sections; no
@@ -533,7 +536,7 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 ## Active Blockers — summary
 
 **Launch-blocking:**
-- GHL tracking number (confirm (956) 460-3489 vs a dedicated tracking line)
+- ~~GHL tracking number~~ ✅ RESOLVED — (956) 403-6826 is wired site-wide
 - GHL contact-form embed
 - GHL chat widget + external tracking scripts
 - og-image (1200×630)
@@ -562,7 +565,7 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 - ✅ GBP — pinned to the Pharr address; schema/NAP/Maps all use Pharr
 
 **Remaining `[NEEDS INPUT]` / `[VERIFY]` (not decisions — data to collect before/at build):**
-- GHL tracking number (confirm (956) 460-3489 vs a dedicated tracking line)
+- ~~GHL tracking number~~ ✅ RESOLVED — (956) 403-6826
 - GHL form embed + chat + tracking scripts
 - og-image, hero-background, cta-background images
 - Exact Google rating decimal (for aggregateRating)
