@@ -129,8 +129,11 @@ icons, accents, and the logo, so brand recognition is intact.
   Insurance is covered in copy (claims-assistance framing), not a logo wall.
 - `<!-- FINANCING SECTION -->` — **DELETE** unless financing is confirmed. `[DECIDE —
   default delete]`.
-- Social share image: `brand_assets/og-image.jpg` (1200×630) — `[NEEDS INPUT — create
-  before launch]`.
+- Social share image: `brand_assets/og-image.jpg` (1200×630, 148 KB) — ✅ **DONE.** Wired on
+  all 13 indexable pages as the absolute URL
+  `https://www.hidalgoroofingremodelingtx.com/brand_assets/og-image.jpg` on both `og:image`
+  and `twitter:image`. Keep it absolute — crawlers cannot resolve a relative path. The
+  1376×768 `og-image.png` design source stays on disk but is gitignored.
 
 ---
 
@@ -444,9 +447,10 @@ tilt/rotation, stained/damaged subjects, privacy-sensitive; owner/people slots u
 > - `brand_assets/logowhite.png` — white version for dark nav/footer, 384×120
 >
 > Rendered logo heights: **nav 64px · footer 72px.** Palette above is derived from the gold
-> logo; nav sizing is derived from the logo dimensions. `[NEEDS INPUT — real project
-> photos, headshot of Richard, hero-background, cta-background, og-image]`. Build against
-> placeholders and swap in one pass.
+> logo; nav sizing is derived from the logo dimensions. Real project photos,
+> `hero-background.mp4`, `hero-background-poster.jpg`, `cta-background.webp`, `og-image.jpg`
+> and `about.jpeg` are all ✅ on disk and wired. Still `[NEEDS INPUT — headshot of
+> Richard]`.
 > ⚠️ **Disk wins.** These are the real filenames — no `logo-white.png`, no `.png` color
 > variant. Re-confirm with `ls brand_assets/` before referencing any new asset.
 
@@ -553,12 +557,12 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 
 ## Active Blockers — summary
 
-**Launch-blocking — ONE item left:**
-- **og-image (1200×630)** → `brand_assets/og-image.jpg`. Until it exists, all 13 indexable
-  pages point `og:image` + `twitter:image` at `https://placehold.co/1200x630` (26 refs,
-  line 16 and line 25 of each page). This is the only remaining launch blocker.
+## 🚀 LAUNCH-READY — zero launch blockers remain
 
-**Launch-blocking — RESOLVED:**
+**Launch-blocking: NONE.** Every item below is closed. Do not re-open one without a
+concrete reason; if a new blocker appears, add it here rather than editing history.
+
+**Launch-blocking — ALL RESOLVED:**
 - ~~GHL tracking number~~ ✅ (956) 403-6826 wired site-wide
 - ~~GHL contact-form embed~~ ✅ wired on the homepage `#contact` + `form_embed.js`
 - ~~GHL chat widget~~ ✅ wired on all 14 pages
@@ -569,11 +573,17 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 - ~~hero-background~~ ✅ `brand_assets/hero-background.mp4` (2.5 MB, in budget)
 - ~~cta-background~~ ✅ `brand_assets/cta-background.webp` (275 KB, converted from the
   2.2 MB PNG; the PNG stays on disk but is gitignored)
-
-**Known open defect (not yet approved for fix):**
-- `poster="/brand_assets/hero-background-poster.jpg"` is referenced by all 14 pages but the
-  file **does not exist** — a 404 on every page load. Either generate the poster frame from
-  `hero-background.mp4` or drop the attribute.
+- ~~og-image (1200×630)~~ ✅ **RESOLVED** — `brand_assets/og-image.jpg`, exactly 1200×630
+  at 148 KB, cropped and re-encoded from the 1376×768 / 2.0 MB `og-image.png` design source
+  (source kept on disk, gitignored, same pattern as `cta-background.png`). All 13 indexable
+  pages now carry the **absolute** URL
+  `https://www.hidalgoroofingremodelingtx.com/brand_assets/og-image.jpg` on both `og:image`
+  and `twitter:image` — absolute because external crawlers have no page context to resolve
+  a relative path. Zero `placehold.co` references remain anywhere. The declared
+  `og:image:width`/`height` of 1200×630 now match the real file.
+- ~~hero-background-poster.jpg 404~~ ✅ **RESOLVED** — extracted from `hero-background.mp4`
+  at 00:00:02 with ffmpeg, 1920×1080 (the video's native size), 343 KB. All 14 pages
+  already pointed at this path; verified zero failed requests across all 14.
 
 **Backfillable (build against placeholders, swap in one pass):**
 - Real project photos + gallery images
@@ -601,7 +611,7 @@ layer. Intentional spacing tokens. A base→elevated→floating depth system.
 - ~~GHL form embed + chat + tracking scripts~~ ✅ RESOLVED — all wired
 - ~~Exact Google rating decimal~~ ✅ MOOT — `aggregateRating` removed
 - ~~hero-background, cta-background~~ ✅ RESOLVED — both real assets on disk
-- **og-image** — still missing; the last launch blocker
+- ~~og-image~~ ✅ RESOLVED — `og-image.jpg` 1200×630, wired on all 13 indexable pages
 - Richard's headshot (the `.photo-frame--portrait` slot in brand.css has no consumer yet)
 - priceRange, state license number, warranty terms, family-owned written confirmation
 - Legal name form for schema — "and" vs "&" — match his GBP listing exactly `[VERIFY]`
