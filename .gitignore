@@ -14,6 +14,10 @@ brand_assets/*-raw.mov
 # WebP that the pages actually reference ships. The PNG is 2.2MB vs 275KB.
 brand_assets/cta-background.png
 
+# Social share card — same rule. og-image.png is the 1376x768 design source;
+# the pages reference the cropped 1200x630 og-image.jpg (2.0MB vs 148KB).
+brand_assets/og-image.png
+
 # Unreferenced client photos. Kept on disk as a source pool to draw from when
 # filling future photo slots, but no page links them, so they must not ship.
 # Anything promoted into a page must be removed from this list.
